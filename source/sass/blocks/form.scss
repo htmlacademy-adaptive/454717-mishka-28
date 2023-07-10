@@ -1,0 +1,42 @@
+.form {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+
+  @media (min-width: $vp-1150) {
+    font-size: 19px;
+    line-height: 22px;
+  }
+}
+
+.form__description {
+  font-size: 13px;
+  line-height: 24px;
+  color: $color-charcoal;
+
+  @media (min-width: $vp-1150) {
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.form__legend {
+  @include special-text;
+}
+
+.form__info {
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    text-align: right;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+.form__button {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}

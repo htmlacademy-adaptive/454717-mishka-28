@@ -17,16 +17,16 @@
 
 <body class="page">
   <header class="page__main-header main-header no-js">
-    <div class="main-header__container">
-      <button class="main-header__toggle" type="button">
-        <span class="visually-hidden">Открыть или закрыть меню навигации по сайту.</span>
-      </button>
+    <button class="main-header__toggle" type="button">
+      <span class="visually-hidden">Открыть или закрыть меню навигации по сайту.</span>
+    </button>
+    <div class="main-header__wrapper">
       <nav class="main-header__nav">
         <a class="main-header__logo" href="index.html" aria-label="Перейти на главную страницу сайта Мишка.">
           <picture>
-            <!-- <source media="(min-width: 1150px)" srcset="img/content/cat-energy-logo-desktop.svg" width="202" height="59">
-            <source media="(min-width: 768px)" srcset="img/content/cat-energy-logo-tablet.svg" width="174" height="52">-->
-            <img class="main-header__logo-img" src="img/content/logo-mishka-phone.svg" alt="Логотип интернет-магазина Мишка." width="86" height="35">
+            <source media="(min-width: 1150px)" srcset="img/content/mishka-logo-desktop.svg" width="149" height="72">
+            <source media="(min-width: 768px)" srcset="img/content/mishka-logo-tablet.svg" width="113" height="46">
+            <img class="main-header__logo-img" src="img/content/mishka-logo-mobile.svg" alt="Логотип интернет-магазина Мишка." width="86" height="35">
           </picture>
         </a>
         <ul class="main-header__nav-list">
@@ -46,17 +46,24 @@
           </li>
         </ul>
       </nav>
-      <div class="main-header__user-nav">
-        <a class="main-header__user-nav-link main-header__user-nav-link--search" href="javascript:undefined;">Поиск по сайту</a>
-        <a class="main-header__user-nav-link main-header__user-nav-link--cart" href="javascript:undefined;">Корзина: пока пуста</a>
+      <div class="main-header__user-nav-wrapper">
+        <div class="main-header__user-nav">
+          <a class="main-header__user-nav-link main-header__user-nav-link--search" href="javascript:undefined;">
+            <span class="main-header__user-nav-link-text">Поиск по сайту</span>
+          </a>
+          <a class="main-header__user-nav-link main-header__user-nav-link--cart" href="javascript:undefined;">Корзина: пока пуста</a>
+        </div>
+        <span class="main-header__text">Бесплатная доставка по России</span>
       </div>
-      <span class="main-header__text">Бесплатная доставка по России</span>
     </div>
   </header>
   <main class="page__page-main">
+    <section class="page__hero hero">
+      <h1 class="hero__title">Вязание на заказ</h1>
+    </section>
     <form class="page__form form" action="https://echo.htmlacademy.ru/" method="post">
       <div class="form__container">
-        <h1 class="form__title">Вязание на заказ</h1>
+        <h2 class="visually-hidden">Оформить заказ</h2>
         <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <fieldset class="form__group">
           <legend class="form__legend">Тип</legend>
@@ -166,7 +173,7 @@
         </fieldset>
         <div class="form__button-container">
           <span class="form__info">*Поля обязательны для заполнения</span>
-          <button class="form__button button" type="submit">Отправить заказ</button>
+          <button class="form__button button button--neutral" type="submit">Отправить заказ</button>
         </div>
       </div>
     </form>
