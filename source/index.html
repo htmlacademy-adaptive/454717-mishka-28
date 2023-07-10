@@ -17,10 +17,10 @@
 
 <body class="page">
   <header class="page__main-header main-header no-js">
-    <div class="main-header__container">
-      <button class="main-header__toggle" type="button">
-        <span class="visually-hidden">Открыть или закрыть меню навигации по сайту.</span>
-      </button>
+    <button class="main-header__toggle" type="button">
+      <span class="visually-hidden">Открыть или закрыть меню навигации по сайту.</span>
+    </button>
+    <div class="main-header__wrapper">
       <nav class="main-header__nav">
         <a class="main-header__logo" href="index.html" aria-label="Перезагрузить страницу.">
           <picture>
@@ -46,11 +46,15 @@
           </li>
         </ul>
       </nav>
-      <div class="main-header__user-nav">
-        <a class="main-header__user-nav-link main-header__user-nav-link--search" href="javascript:undefined;">Поиск по сайту</a>
-        <a class="main-header__user-nav-link main-header__user-nav-link--cart" href="javascript:undefined;">Корзина: пока пуста</a>
+      <div class="main-header__user-nav-wrapper">
+        <div class="main-header__user-nav">
+          <a class="main-header__user-nav-link main-header__user-nav-link--search" href="javascript:undefined;">
+            <span class="main-header__user-nav-link-text">Поиск по сайту</span>
+          </a>
+          <a class="main-header__user-nav-link main-header__user-nav-link--cart" href="javascript:undefined;">Корзина: пока пуста</a>
+        </div>
+        <span class="main-header__text">Бесплатная доставка по России</span>
       </div>
-      <span class="main-header__text">Бесплатная доставка по России</span>
     </div>
   </header>
   <main class="page__page-main">
