@@ -1,0 +1,17 @@
+.manufacturing__title {
+  font-weight: 700;
+}
+
+.manufacturing__text {
+  font-size: 13px;
+  color: $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+.manufacturing__button {
+  padding: 18px 11px;
+}

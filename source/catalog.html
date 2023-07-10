@@ -17,16 +17,16 @@
 
 <body class="page">
   <header class="page__main-header main-header no-js">
-    <div class="main-header__container">
-      <button class="main-header__toggle" type="button">
-        <span class="visually-hidden">Открыть или закрыть меню навигации по сайту.</span>
-      </button>
+    <button class="main-header__toggle" type="button">
+      <span class="visually-hidden">Открыть или закрыть меню навигации по сайту.</span>
+    </button>
+    <div class="main-header__wrapper">
       <nav class="main-header__nav">
         <a class="main-header__logo" href="index.html" aria-label="Перейти на главную страницу сайта Мишка.">
           <picture>
-            <!-- <source media="(min-width: 1150px)" srcset="img/content/cat-energy-logo-desktop.svg" width="202" height="59">
-            <source media="(min-width: 768px)" srcset="img/content/cat-energy-logo-tablet.svg" width="174" height="52">-->
-            <img class="main-header__logo-img" src="img/content/logo-mishka-phone.svg" alt="Логотип интернет-магазина Мишка." width="86" height="35">
+            <source media="(min-width: 1150px)" srcset="img/content/mishka-logo-desktop.svg" width="149" height="72">
+            <source media="(min-width: 768px)" srcset="img/content/mishka-logo-tablet.svg" width="113" height="46">
+            <img class="main-header__logo-img" src="img/content/mishka-logo-mobile.svg" alt="Логотип интернет-магазина Мишка." width="86" height="35">
           </picture>
         </a>
         <ul class="main-header__nav-list">
@@ -46,28 +46,37 @@
           </li>
         </ul>
       </nav>
-      <div class="main-header__user-nav">
-        <a class="main-header__user-nav-link main-header__user-nav-link--search" href="javascript:undefined;">Поиск по сайту</a>
-        <a class="main-header__user-nav-link main-header__user-nav-link--cart" href="javascript:undefined;">Корзина: пока пуста</a>
+      <div class="main-header__user-nav-wrapper">
+        <div class="main-header__user-nav">
+          <a class="main-header__user-nav-link main-header__user-nav-link--search" href="javascript:undefined;">
+            <span class="main-header__user-nav-link-text">Поиск по сайту</span>
+          </a>
+          <a class="main-header__user-nav-link main-header__user-nav-link--cart" href="javascript:undefined;">Корзина: пока пуста</a>
+        </div>
+        <span class="main-header__text">Бесплатная доставка по России</span>
       </div>
-      <span class="main-header__text">Бесплатная доставка по России</span>
     </div>
   </header>
   <main class="page__page-main">
+    <section class="page__hero hero">
+      <h1 class="hero__title">Каталог товаров</h1>
+    </section>
     <section class="catalog">
-      <h1 class="catalog__title">Каталог товаров</h1>
+      <h2 class="visually-hidden">Популярные товары</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
-          <picture class="catalog__img-wrapper">
-            <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/catalog/bunny-desktop@1x.webp 1x, img/content/catalog/bunny-desktop@2x.webp 2x" width="316" height="462">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/catalog/bunny-tablet@1x.webp 1x, img/content/catalog/bunny-tablet@2x.webp 2x" width="334" height="334">
-            <source type="image/webp" srcset="img/content/catalog/bunny-mobile@1x.webp 1x, img/content/catalog/bunny-mobile@2x.webp 2x" width="260" height="195">
-            <source media="(min-width: 1150px)" srcset="img/content/catalog/bunny-desktop@1x.jpg 1x, img/content/catalog/bunny-desktop@2x.jpg 2x" width="316" height="462">
-            <source media="(min-width: 768px)" srcset="img/content/catalog/bunny-tablet@1x.jpg 1x, img/content/catalog/bunny-tablet@2x.jpg 2x" width="334" height="334">
-            <img class="catalog__img-wrapper" src="img/content/catalog/bunny-mobile@1x.jpg" srcset="img/content/catalog/bunny-mobile@2x.jpg 2x" width="260" height="195" alt="">
-          </picture>
+          <a class="catalog__img-link" href="javascript:undefined;">
+            <picture class="catalog__img-wrapper">
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/catalog/bunny-desktop@1x.webp 1x, img/content/catalog/bunny-desktop@2x.webp 2x" width="316" height="462">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/catalog/bunny-tablet@1x.webp 1x, img/content/catalog/bunny-tablet@2x.webp 2x" width="334" height="334">
+              <source type="image/webp" srcset="img/content/catalog/bunny-mobile@1x.webp 1x, img/content/catalog/bunny-mobile@2x.webp 2x" width="260" height="195">
+              <source media="(min-width: 1150px)" srcset="img/content/catalog/bunny-desktop@1x.jpg 1x, img/content/catalog/bunny-desktop@2x.jpg 2x" width="316" height="462">
+              <source media="(min-width: 768px)" srcset="img/content/catalog/bunny-tablet@1x.jpg 1x, img/content/catalog/bunny-tablet@2x.jpg 2x" width="334" height="334">
+              <img class="catalog__img-wrapper" src="img/content/catalog/bunny-mobile@1x.jpg" srcset="img/content/catalog/bunny-mobile@2x.jpg 2x" width="260" height="195" alt="">
+            </picture>
+          </a>
           <div class="catalog__content">
-            <h2 class="catalog__subtitle">Зайчик-попрыгайчик</h2>
+            <a class="catalog__subtitle" href="javascript:undefined;">Зайчик-попрыгайчик</a>
             <p class="catalog__description">Рост 30 см, вес 200 г</p>
             <div class="catalog__wrapper">
               <span class="catalog__price">1 200 руб.</span>
@@ -78,16 +87,18 @@
           </div>
         </li>
         <li class="catalog__item">
-          <picture class="catalog__img-wrapper">
-            <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/catalog/laundry-basket-desktop@1x.webp 1x, img/content/catalog/laundry-basket-desktop@2x.webp 2x" width="316" height="462">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/catalog/laundry-basket-tablet@1x.webp 1x, img/content/catalog/laundry-basket-tablet@2x.webp 2x" width="334" height="334">
-            <source type="image/webp" srcset="img/content/catalog/laundry-basket-mobile@1x.webp 1x, img/content/catalog/laundry-basket-mobile@2x.webp 2x" width="260" height="195">
-            <source media="(min-width: 1150px)" srcset="img/content/catalog/laundry-basket-desktop@1x.jpg 1x, img/content/catalog/laundry-basket-desktop@2x.jpg 2x" width="316" height="462">
-            <source media="(min-width: 768px)" srcset="img/content/catalog/laundry-basket-tablet@1x.jpg 1x, img/content/catalog/laundry-basket-tablet@2x.jpg 2x" width="334" height="334">
-            <img class="catalog__img-wrapper" src="img/content/catalog/laundry-basket-mobile@1x.jpg" srcset="img/content/catalog/laundry-basket-mobile@2x.jpg 2x" width="260" height="195" alt="">
-          </picture>
+          <a class="catalog__img-link" href="javascript:undefined;">
+            <picture class="catalog__img-wrapper">
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/catalog/laundry-basket-desktop@1x.webp 1x, img/content/catalog/laundry-basket-desktop@2x.webp 2x" width="316" height="462">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/catalog/laundry-basket-tablet@1x.webp 1x, img/content/catalog/laundry-basket-tablet@2x.webp 2x" width="334" height="334">
+              <source type="image/webp" srcset="img/content/catalog/laundry-basket-mobile@1x.webp 1x, img/content/catalog/laundry-basket-mobile@2x.webp 2x" width="260" height="195">
+              <source media="(min-width: 1150px)" srcset="img/content/catalog/laundry-basket-desktop@1x.jpg 1x, img/content/catalog/laundry-basket-desktop@2x.jpg 2x" width="316" height="462">
+              <source media="(min-width: 768px)" srcset="img/content/catalog/laundry-basket-tablet@1x.jpg 1x, img/content/catalog/laundry-basket-tablet@2x.jpg 2x" width="334" height="334">
+              <img class="catalog__img-wrapper" src="img/content/catalog/laundry-basket-mobile@1x.jpg" srcset="img/content/catalog/laundry-basket-mobile@2x.jpg 2x" width="260" height="195" alt="">
+            </picture>
+          </a>
           <div class="catalog__content">
-            <h2 class="catalog__subtitle">Корзинка для белья</h2>
+            <a class="catalog__subtitle" href="javascript:undefined;">Корзинка для белья</a>
             <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
             <div class="catalog__wrapper">
               <span class="catalog__price">690 руб.</span>
@@ -98,16 +109,18 @@
           </div>
         </li>
         <li class="catalog__item">
-          <picture class="catalog__img-wrapper">
-            <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/catalog/large-basket-desktop@1x.webp 1x, img/content/catalog/large-basket-desktop@2x.webp 2x" width="316" height="462">
-            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/catalog/large-basket-tablet@1x.webp 1x, img/content/catalog/large-basket-tablet@2x.webp 2x" width="334" height="334">
-            <source type="image/webp" srcset="img/content/catalog/large-basket-mobile@1x.webp 1x, img/content/catalog/large-basket-mobile@2x.webp 2x" width="260" height="195">
-            <source media="(min-width: 1150px)" srcset="img/content/catalog/large-basket-desktop@1x.jpg 1x, img/content/catalog/large-basket-desktop@2x.jpg 2x" width="316" height="462">
-            <source media="(min-width: 768px)" srcset="img/content/catalog/large-basket-tablet@1x.jpg 1x, img/content/catalog/large-basket-tablet@2x.jpg 2x" width="334" height="334">
-            <img class="catalog__img-wrapper" src="img/content/catalog/large-basket-mobile@1x.jpg" srcset="img/content/catalog/large-basket-mobile@2x.jpg 2x" width="260" height="195" alt="">
-          </picture>
+          <a class="catalog__img-link" href="javascript:undefined;">
+            <picture class="catalog__img-wrapper">
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/catalog/large-basket-desktop@1x.webp 1x, img/content/catalog/large-basket-desktop@2x.webp 2x" width="316" height="462">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/catalog/large-basket-tablet@1x.webp 1x, img/content/catalog/large-basket-tablet@2x.webp 2x" width="334" height="334">
+              <source type="image/webp" srcset="img/content/catalog/large-basket-mobile@1x.webp 1x, img/content/catalog/large-basket-mobile@2x.webp 2x" width="260" height="195">
+              <source media="(min-width: 1150px)" srcset="img/content/catalog/large-basket-desktop@1x.jpg 1x, img/content/catalog/large-basket-desktop@2x.jpg 2x" width="316" height="462">
+              <source media="(min-width: 768px)" srcset="img/content/catalog/large-basket-tablet@1x.jpg 1x, img/content/catalog/large-basket-tablet@2x.jpg 2x" width="334" height="334">
+              <img class="catalog__img-wrapper" src="img/content/catalog/large-basket-mobile@1x.jpg" srcset="img/content/catalog/large-basket-mobile@2x.jpg 2x" width="260" height="195" alt="">
+            </picture>
+          </a>
           <div class="catalog__content">
-            <h2 class="catalog__subtitle">Большая корзинка для игрушек</h2>
+            <a class="catalog__subtitle" href="javascript:undefined;">Большая корзинка для игрушек</a>
             <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
             <div class="catalog__wrapper">
               <span class="catalog__price">1 500 руб.</span>
@@ -135,7 +148,7 @@
         </a>
       </div>
       <p class="manufacturing__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-      <a class="manufacturing__button button" href="javascript:undefined;">Сделать заказ</a>
+      <a class="manufacturing__button button button--neutral" href="javascript:undefined;">Сделать заказ</a>
     </section>
   </main>
   <footer class="page__page-footer page-footer">
