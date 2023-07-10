@@ -1,3 +1,15 @@
+.contacts__title {
+  @include subtitle;
+}
+
+.contacts__description {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 30px;
+  color: $color-charcoal;
+}
+
+
 // .contacts {
 //   position: relative;
 

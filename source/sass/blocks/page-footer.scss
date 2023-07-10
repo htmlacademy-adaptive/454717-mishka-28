@@ -1,7 +1,17 @@
-// .page-footer {
-//   background-color: $color-white-smoke;
-// }
+.page-footer {
+  background-color: $color-white-smoke;
+}
 
+.page-footer__copyright {
+  text-decoration: none;
+}
+
+.page-footer__copyright-text {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
+  color: $color-black;
+}
 // .page-footer__container {
 //   display: grid;
 //   padding: 40px 0;

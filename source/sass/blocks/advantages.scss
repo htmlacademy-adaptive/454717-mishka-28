@@ -1,0 +1,12 @@
+.advantages__title {
+  @include subtitle;
+}
+
+.advantages__item {
+  font-weight: 700;
+  line-height: 20px;
+
+  @media (min-width: $vp-768) {
+    line-height: 22px;
+  }
+}

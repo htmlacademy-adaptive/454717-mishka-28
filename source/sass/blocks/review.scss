@@ -1,0 +1,34 @@
+.review__title {
+  @include subtitle;
+}
+
+.slider__content {
+  font-size: 15px;
+  line-height: 30px;
+  color: $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    font-size: 17px;
+  }
+}
+
+.slider__caption-author {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $color-black;
+
+  @media (min-width: $vp-768) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $vp-1150) {
+    font-size: 17px;
+  }
+}
+
+.slider__caption-address {
+  font-size: 17px;
+  line-height: 30px;
+  color: $color-charcoal;
+}
