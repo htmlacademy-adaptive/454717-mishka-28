@@ -1,12 +1,98 @@
+.advantages__wrapper {
+  padding-top: 32px;
+
+  @include leveler;
+}
+
 .advantages__title {
+  margin: 0 0 28px 0;
+
   @include subtitle;
 }
 
+.advantages__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  gap: 30px;
+}
+
 .advantages__item {
+  position: relative;
+
+  padding-top: 53px;
+
   font-weight: 700;
   line-height: 20px;
 
   @media (min-width: $vp-768) {
     line-height: 22px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -4px;
+
+    width: 55px;
+    height: 38px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--eco {
+    &::before {
+      background-image: url("../img/stack.svg#eco");
+      background-size: 33px 38px;
+    }
+  }
+
+  &--price {
+    &::before {
+      top: -5px;
+
+      background-image: url("../img/stack.svg#price");
+      background-size: 47px 27px;
+    }
+  }
+
+
+  &--like {
+    &::before {
+      background-image: url("../img/stack.svg#like");
+      background-size: 34px 27px;
+    }
+  }
+
+  &--handmade {
+    &::before {
+      background-image: url("../img/stack.svg#handmade");
+      background-size: 35px 34px;
+    }
+  }
+
+  &--patriot {
+    &::before {
+      top: -4px;
+      left: -6px;
+
+      background-image: url("../img/stack.svg#patriot");
+      background-size: 55px 23px;
+    }
+  }
+
+  &--gift {
+    &::before {
+      top: -2px;
+      left: -8px;
+
+      background-image: url("../img/stack.svg#gift");
+      background-size: 33px 32px;
+    }
   }
 }

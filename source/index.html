@@ -58,38 +58,33 @@
     </div>
   </header>
   <main class="page__page-main">
-    <div class="page__hero hero hero--index">
-      <section class="hero__wrapper">
-        <h1 class="hero__title title">Милые штуки ручной работы для дома</h1>
-        <picture class="hero__img-wrapper">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/content/hero-tablet@1x.webp 1x, img/content/hero-tablet@2x.webp 2x" width="768" height="746">
-          <source type="image/webp" srcset="img/content/hero-mobile@1x.webp 1x, img/content/hero-mobile@2x.webp 2x" width="320" height="373">
-          <source media="(min-width: 768px)" srcset="img/content/hero-tablet@1x.jpg 1x, img/content/hero-tablet@2x.jpg 2x" width="768" height="746">
-          <img class="hero__img" src="img/content/hero-mobile@1x.jpg" srcset="img/content/hero-mobile@1x.jpg 2x" width="320" height="373" alt="Полочки, наполненные вызанными корзинками и игрушками ручной работы.">
-        </picture>
-      </section>
-      <section class="categories">
-        <h2 class="visually-hidden">Категории товаров.</h2>
-        <ul class="categories__list">
-          <li class="categories__item">
-            <a class="categories__link categories__link--interior" href="javascript:undefined;">
-              <span class="categories__text">Предметы интерьера</span>
-              <svg class="categories__img" aria-hidden="true" focusable="false" width="40" height="62">
-                <use xlink:href="img/stack.svg#interior"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="categories__item">
-            <a class="categories__link categories__link--toys" href="javascript:undefined;">
-              <span class="categories__text">Детские игрушки</span>
-              <svg class="categories__img" aria-hidden="true" focusable="false" width="60" height="60">
-                <use xlink:href="img/stack.svg#toys"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </section>
-    </div>
+    <section class="page__hero hero hero--index">
+      <h1 class="hero__title title">Милые штуки ручной<br>работы для дома</h1>
+      <picture class="hero__img-wrapper">
+        <source type="image/webp" media="(min-width: 768px)" srcset="img/content/hero-tablet@1x.webp 1x, img/content/hero-tablet@2x.webp 2x" width="768" height="746">
+        <source type="image/webp" srcset="img/content/hero-mobile@1x.webp 1x, img/content/hero-mobile@2x.webp 2x" width="320" height="373">
+        <source media="(min-width: 768px)" srcset="img/content/hero-tablet@1x.jpg 1x, img/content/hero-tablet@2x.jpg 2x" width="768" height="746">
+        <img class="hero__img" src="img/content/hero-mobile@1x.jpg" srcset="img/content/hero-mobile@1x.jpg 2x" width="320" height="373" alt="Полочки, наполненные вызанными корзинками и игрушками ручной работы.">
+      </picture>
+      <ul class="hero__categories-list">
+        <li class="hero__categories-item">
+          <a class="hero__categories-link hero__categories-link--interior" href="javascript:undefined;">
+            <span class="hero__categories-text">Предметы интерьера</span>
+            <svg class="hero__categories-img" aria-hidden="true" focusable="false" width="40" height="62">
+              <use xlink:href="img/stack.svg#interior"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="hero__categories-item">
+          <a class="hero__categories-link hero__categories-link--toys" href="javascript:undefined;">
+            <span class="hero__categories-text">Детские игрушки</span>
+            <svg class="hero__categories-img" aria-hidden="true" focusable="false" width="60" height="60">
+              <use xlink:href="img/stack.svg#toys"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </section>
     <section class="page__week-product week-product">
       <div class="week-product__wrapper">
         <h2 class="week-product__title">Товар недели</h2>
@@ -109,13 +104,13 @@
             <dd class="week-product__description-definition">15 см</dd>
           </div>
         </dl>
-        <picture class="hero__img-wrapper">
+        <picture class="week-product__img-wrapper">
           <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/triple-set-desktop@1x.webp 1x, img/content/triple-set-desktop@2x.webp 2x" width="525" height="636">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/content/triple-set-tablet@1x.webp 1x, img/content/triple-set-tablet@2x.webp 2x" width="334" height="404">
           <source type="image/webp" srcset="img/content/triple-set-mobile@1x.webp 1x, img/content/triple-set-mobile@2x.webp 2x" width="260" height="315">
           <source media="(min-width: 1150px)" srcset="img/content/triple-set-desktop@1x.jpg 1x, img/content/triple-set-desktop@2x.jpg 2x" width="525" height="636">
           <source media="(min-width: 768px)" srcset="img/content/triple-set-tablet@1x.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x" width="334" height="404">
-          <img class="hero__img" src="img/content/triple-set-mobile@1x.jpg" srcset="img/content/triple-set-mobile@1x.jpg 2x" width="260" height="315" alt="Три круглые корзинки, вставляющиеся друг в друга.">
+          <img class="week-product__img" src="img/content/triple-set-mobile@1x.jpg" srcset="img/content/triple-set-mobile@1x.jpg 2x" width="260" height="315" alt="Три круглые корзинки, вставляющиеся друг в друга.">
         </picture>
         <p class="week-product__price">Цена: 990 руб.</p>
         <a class="week-product__button button button--neutral" href="javascript:undefined;">Заказать</a>
@@ -125,22 +120,12 @@
       <div class="advantages__wrapper">
         <h2 class="advantages__title">Коротко о нас:</h2>
         <ul class="advantages__list">
-          <li class="advantages__item advantages__item--eco">Экологически чистые материалы</li>
-        </ul>
-        <ul class="advantages__list">
-          <li class="advantages__item advantages__item--price">Скандинавский стиль по российской цене</li>
-        </ul>
-        <ul class="advantages__list">
-          <li class="advantages__item advantages__item--like">Увеличивает лайки на фотографиях</li>
-        </ul>
-        <ul class="advantages__list">
-          <li class="advantages__item advantages__item--handmade">Связано вручную с любовью и умилением</li>
-        </ul>
-        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--eco">Экологически чистые&nbsp;материалы</li>
+          <li class="advantages__item advantages__item--price">Скандинавский стиль по&nbsp;российской цене</li>
+          <li class="advantages__item advantages__item--like">Увеличивает лайки на&nbsp;фотографиях</li>
+          <li class="advantages__item advantages__item--handmade">Связано вручную с&nbsp;любовью&nbsp;и умилением</li>
           <li class="advantages__item advantages__item--patriot">Поддержка отечественного производителя</li>
-        </ul>
-        <ul class="advantages__list">
-          <li class="advantages__item advantages__item--gift">Поставляется в подарочной упаковке</li>
+          <li class="advantages__item advantages__item--gift">Поставляется в&nbsp;подарочной&nbsp;упаковке</li>
         </ul>
       </div>
     </section>
@@ -149,8 +134,8 @@
         <h2 class="review__title">Отзывы</h2>
         <div class="slider">
           <ul class="slider__list">
-            <li class="slider__item">
-              <div class="slider__content">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</div>
+            <li class="slider__item slider__item--current">
+              <div class="slider__content">Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!</div>
               <p class="slider__caption">
                 <span class="slider__caption-author">Анастасия Красильникова</span>
                 <span class="slider__caption-address">@misssssiskras</span>
@@ -165,10 +150,10 @@
             </li>
           </ul>
           <div class="slider__controls">
-            <button class="slider__button slider__button--prev" type="button">
+            <button class="slider__control slider__control--prev" type="button">
               <span class="visually-hidden">Предыдущий слайд.</span>
             </button>
-            <button class="slider__button slider__button--next" type="button">
+            <button class="slider__control slider__control--next" type="button">
               <span class="visually-hidden">Следующий слайд.</span>
             </button>
           </div>
@@ -183,11 +168,13 @@
           <dl class="contacts__description">
             <div class="contacts__description-container">
               <dt class="contacts__description-term">e-mail:</dt>
-              <dd class="contacts__description-definition">info@mimimishkashop.ru</dd>
+              <dd class="contacts__description-definition">
+                <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              </dd>
             </div>
             <div class="contacts__description-container">
               <dt class="contacts__description-term">адрес:</dt>
-              <dd class="contacts__description-definition">г. Санкт-Петербургул. Большая Конюшеннаяд. 19/8, офис 101</dd>
+              <dd class="contacts__description-definition">г. Санкт-Петербург ул.&nbsp;Большая Конюшенная д. 19/8, офис 101</dd>
             </div>
           </dl>
         </address>
@@ -238,6 +225,37 @@
       </a>
     </div>
   </footer>
+  <div class="modal">
+    <section class="modal__to-cart to-cart">
+      <h2 class="to-cart__title">Добавить в корзину</h2>
+      <form class="to-cart__form" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="to-cart__group">
+          <legend class="to-cart__legend">Выберите размер:</legend>
+          <ul class="to-cart__list">
+            <li class="to-cart__item">
+              <label class="to-cart__element">
+                <input class="to-cart__radio visually-hidden" type="radio" name="size" value="s" checked>
+                <span class="to-cart__radio-text">s</span>
+              </label>
+            </li>
+            <li class="to-cart__item">
+              <label class="to-cart__element">
+                <input class="to-cart__radio visually-hidden" type="radio" name="size" value="m">
+                <span class="to-cart__radio-text">m</span>
+              </label>
+            </li>
+            <li class="to-cart__item">
+              <label class="to-cart__element">
+                <input class="to-cart__radio visually-hidden" type="radio" name="size" value="l">
+                <span class="to-cart__radio-text">l</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="to-cart__button" type="submit">Добавить</button>
+      </form>
+    </section>
+  </div>
   <script src="js/script.js"></script>
 </body>
 
