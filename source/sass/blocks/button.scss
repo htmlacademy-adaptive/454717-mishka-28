@@ -25,10 +25,6 @@
 
     border: 2px solid $color-charcoal;
 
-    @media (min-width: $vp-768) {
-      padding: 16px 20px;
-    }
-
     &:hover {
       color: $color-white;
 

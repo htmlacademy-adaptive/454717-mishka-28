@@ -1,9 +1,14 @@
 .week-product {
   position: relative;
+
   background-image: url("../img/stack.svg#zigzag-line");
   background-repeat: repeat-x;
   background-position: center bottom;
   background-size: 320px 6px;
+
+  @media (min-width: $vp-768) {
+    background-size: 772px 17px;
+  }
 }
 
 .week-product__wrapper {
@@ -12,12 +17,32 @@
   padding-bottom: 42px;
 
   @include leveler;
+
+  @media (min-width: $vp-768) {
+    padding-top: 52px;
+    padding-bottom: 67px;
+
+    gap: 33px 42px;
+    grid-template-areas:
+      "subtitle    subtitle title"
+      "text        img      img"
+      "description img      img"
+      "price       img      img"
+      "button      img      img";
+    grid-template-columns: 1fr 180px 113px;
+  }
 }
 
 .week-product__title {
   margin: 0 0 17px 0;
 
   @include special-text;
+
+  @media (min-width: $vp-768) {
+    margin: 6px 12px 0 0;
+
+    grid-area: title;
+  }
 }
 
 .week-product__subtitle {
@@ -25,6 +50,12 @@
   margin: 0 0 4px 0;
 
   @include subtitle;
+
+  @media (min-width: $vp-768) {
+    margin: 0;
+
+    grid-area: subtitle;
+  }
 }
 
 .week-product__text {
@@ -35,8 +66,12 @@
   color: $color-charcoal;
 
   @media (min-width: $vp-768) {
+    margin: 5px 0;
+
     font-size: 17px;
     line-height: 30px;
+
+    grid-area: text;
   }
 }
 
@@ -46,6 +81,12 @@
   font-size: 15px;
   line-height: 20px;
   color: $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 26px;
+
+    grid-area: description;
+  }
 }
 
 .week-product__description-container {
@@ -54,7 +95,12 @@
 
   box-shadow: 0 1px 0 0 $color-whisper;
 
-  grid-template-columns: 38% 62%;
+  gap: 0 15px;
+  grid-template-columns: 32% 1fr;
+
+  @media (min-width: $vp-768) {
+    grid-template-columns: 28% 1fr;
+  }
 }
 
 .week-product__description-definition {
@@ -63,6 +109,12 @@
 
 .week-product__img-wrapper {
   margin: 0 0 26px 0;
+
+  @media (min-width: $vp-768) {
+    margin: 16px 0 0 0;
+
+    grid-area: img;
+  }
 }
 
 .week-product__img {
@@ -76,4 +128,16 @@
   font-weight: 700;
   text-align: center;
   color: #444444;
+
+  @media (min-width: $vp-768) {
+    margin: 0;
+
+    grid-area: price;
+  }
+}
+
+.week-product__button {
+  @media (min-width: $vp-768) {
+    grid-area: button;
+  }
 }

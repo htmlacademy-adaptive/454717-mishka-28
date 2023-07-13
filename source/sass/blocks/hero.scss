@@ -7,11 +7,7 @@
   background-color: $color-white-smoke;
 
   @media (min-width: $vp-768) {
-    top: -65px;
-
-    padding-top: 156px;
-
-    box-shadow: 0 -1px 0 0 rgba($color-black, 0.1);
+    padding-top: 91px;
   }
 
   &--index {
@@ -22,7 +18,7 @@
     background-color: #fafafa;
 
     @media (min-width: $vp-768) {
-      min-height: 746px;
+      min-height: 681px;
     }
   }
 
@@ -77,7 +73,7 @@
   transform: translateX(-50%);
 
   @media (min-width: $vp-768) {
-    top: 0;
+    top: -65px;
   }
 }
 
