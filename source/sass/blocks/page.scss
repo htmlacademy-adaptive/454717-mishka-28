@@ -21,6 +21,10 @@
 
 .page__advantages {
   margin-bottom: 58px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 83px;
+  }
 }
 
 .page__page-footer {

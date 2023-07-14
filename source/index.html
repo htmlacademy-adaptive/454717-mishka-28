@@ -89,21 +89,23 @@
       <div class="week-product__wrapper">
         <h2 class="week-product__title">Товар недели</h2>
         <h3 class="week-product__subtitle">Вязаные корзинки</h3>
-        <p class="week-product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
-        <dl class="week-product__description">
-          <div class="week-product__description-container">
-            <dt class="week-product__description-term">Цвет:</dt>
-            <dd class="week-product__description-definition">тиффани/серый</dd>
-          </div>
-          <div class="week-product__description-container">
-            <dt class="week-product__description-term">Диаметр:</dt>
-            <dd class="week-product__description-definition">25 см</dd>
-          </div>
-          <div class="week-product__description-container">
-            <dt class="week-product__description-term">Высота:</dt>
-            <dd class="week-product__description-definition">15 см</dd>
-          </div>
-        </dl>
+        <div class="week-product__content">
+          <p class="week-product__text">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+          <dl class="week-product__description">
+            <div class="week-product__description-container">
+              <dt class="week-product__description-term">Цвет:</dt>
+              <dd class="week-product__description-definition">тиффани/серый</dd>
+            </div>
+            <div class="week-product__description-container">
+              <dt class="week-product__description-term">Диаметр:</dt>
+              <dd class="week-product__description-definition">25 см</dd>
+            </div>
+            <div class="week-product__description-container">
+              <dt class="week-product__description-term">Высота:</dt>
+              <dd class="week-product__description-definition">15 см</dd>
+            </div>
+          </dl>
+        </div>
         <picture class="week-product__img-wrapper">
           <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/triple-set-desktop@1x.webp 1x, img/content/triple-set-desktop@2x.webp 2x" width="525" height="636">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/content/triple-set-tablet@1x.webp 1x, img/content/triple-set-tablet@2x.webp 2x" width="334" height="404">
@@ -123,42 +125,40 @@
           <li class="advantages__item advantages__item--eco">Экологически чистые&nbsp;материалы</li>
           <li class="advantages__item advantages__item--price">Скандинавский стиль по&nbsp;российской цене</li>
           <li class="advantages__item advantages__item--like">Увеличивает лайки на&nbsp;фотографиях</li>
-          <li class="advantages__item advantages__item--handmade">Связано вручную с&nbsp;любовью&nbsp;и умилением</li>
+          <li class="advantages__item advantages__item--handmade">Связано вручную с&nbsp;любовью&nbsp;и&nbsp;умилением</li>
           <li class="advantages__item advantages__item--patriot">Поддержка отечественного производителя</li>
           <li class="advantages__item advantages__item--gift">Поставляется в&nbsp;подарочной&nbsp;упаковке</li>
         </ul>
       </div>
     </section>
-    <section class="page__review review">
-      <div class="review__wrapper">
-        <h2 class="review__title">Отзывы</h2>
-        <div class="slider">
-          <ul class="slider__list">
-            <li class="slider__item slider__item--current">
-              <div class="slider__content">Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!</div>
-              <p class="slider__caption">
-                <span class="slider__caption-author">Анастасия Красильникова</span>
-                <span class="slider__caption-address">@misssssiskras</span>
-              </p>
-            </li>
-            <li class="slider__item">
-              <div class="slider__content">Текст</div>
-              <p class="slider__caption">
-                <span class="slider__caption-author">Имя Фамилия</span>
-                <span class="slider__caption-address">@...</span>
-              </p>
-            </li>
-          </ul>
-          <div class="slider__controls">
-            <button class="slider__control slider__control--prev" type="button">
-              <span class="visually-hidden">Предыдущий слайд.</span>
-            </button>
-            <button class="slider__control slider__control--next" type="button">
-              <span class="visually-hidden">Следующий слайд.</span>
-            </button>
-          </div>
-          <a class="slider__button button button--neutral" href="javascript:undefined;">Написать</a>
+    <section class="page__slider slider">
+      <div class="slider__wrapper">
+        <h2 class="slider__title">Отзывы</h2>
+        <ul class="slider__list">
+          <li class="slider__item slider__item--current">
+            <div class="slider__content">Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!</div>
+            <p class="slider__caption">
+              <span class="slider__caption-author">Анастасия Красильникова</span>
+              <span class="slider__caption-address">@misssssiskras</span>
+            </p>
+          </li>
+          <li class="slider__item">
+            <div class="slider__content">Текст</div>
+            <p class="slider__caption">
+              <span class="slider__caption-author">Имя Фамилия</span>
+              <span class="slider__caption-address">@...</span>
+            </p>
+          </li>
+        </ul>
+        <div class="slider__controls">
+          <button class="slider__control slider__control--prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд.</span>
+          </button>
+          <button class="slider__control slider__control--next" type="button">
+            <span class="visually-hidden">Следующий слайд.</span>
+          </button>
         </div>
+        <a class="slider__button button button--neutral" href="javascript:undefined;">Написать</a>
       </div>
     </section>
     <section class="page__contacts contacts">
@@ -179,9 +179,9 @@
           </dl>
         </address>
       </div>
-      <div class="contacts__map no-js">
+      <div class="contacts__map">
         <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036257198034!2d30.320472477071675!3d59.93871916209381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x62740c0ffcd8a91f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsIDEwMSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTE4Ng!5e0!3m2!1sru!2sru!4v1688456587509!5m2!1sru!2sru" width="320" height="454" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <picture class="contacts__map-image-wrapper">
+        <picture>
           <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/map-desktop@1x.webp 1x, img/content/map-desktop@2x.webp 2x" width="527" height="457">
           <source type="image/webp" media="(min-width: 768px)" srcset="img/content/map-tablet@1x.webp 1x, img/content/map-tablet@2x.webp 2x" width="768" height="457">
           <source type="image/webp" srcset="img/content/map-mobile@1x.webp 1x, img/content/map-mobile@2x.webp 2x" width="320" height="454">
@@ -226,7 +226,7 @@
     </div>
   </footer>
   <div class="modal">
-    <section class="modal__to-cart to-cart">
+    <section class="modal__content modal__to-cart to-cart">
       <h2 class="to-cart__title">Добавить в корзину</h2>
       <form class="to-cart__form" action="https://echo.htmlacademy.ru/" method="post">
         <fieldset class="to-cart__group">

@@ -1,8 +1,58 @@
+.slider {
+  padding-bottom: 51px;
+
+  background-image: url("../img/stack.svg#zigzag-line");
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  background-size: 320px 6px;
+
+  @media (min-width: $vp-768) {
+    padding-bottom: 85px;
+
+    background-image: url("../img/stack.svg#zigzag-line"), url("../img/background/review-background@1x.jpg");
+    background-repeat: repeat-x, no-repeat;
+    background-position: center bottom, left top;
+    background-size: 772px 17px, 350px 457px;
+  }
+}
+
+.slider__wrapper {
+  @include leveler;
+
+  @media (min-width: $vp-768) {
+    position: relative;
+
+    display: grid;
+    align-content: start;
+    min-height: 457px;
+    padding-top: 82px;
+    padding-bottom: 17px;
+
+    gap: 38px;
+    grid-template-columns: 1fr 173px;
+  }
+}
+
+.slider__title {
+  margin: 0 0 14px 0;
+
+  @include subtitle;
+
+  @media (min-width: $vp-768) {
+    order: -2;
+    margin: 0;
+  }
+}
+
 .slider__list {
   margin: 0;
   padding: 0;
 
   list-style-type: none;
+
+  @media (min-width: $vp-768) {
+    grid-column: 1/-1;
+  }
 }
 
 .slider__item {
@@ -21,12 +71,18 @@
   color: $color-charcoal;
 
   @media (min-width: $vp-768) {
+    margin: 0 0 62px;
+
     font-size: 17px;
   }
 }
 
 .slider__caption {
   margin: 0 0 30px 0;
+
+  @media (min-width: $vp-768) {
+    max-width: 457px;
+  }
 }
 
 .slider__caption-author {
@@ -55,21 +111,42 @@
 
 .slider__controls {
   display: grid;
+  max-width: 260px;
   margin-bottom: 38px;
 
   grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $vp-768) {
+    position: absolute;
+    right: 73px;
+    bottom: 61px;
+
+    display: grid;
+    width: 137px;
+    height: 26px;
+    margin: 0;
+
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .slider__control {
-  padding: 10px 33px 10px 36px;
+  padding: 12px 33px 12px 36px;
 
   background-color: $color-white;
   border: 1px solid $color-whisper;
 
+  @media (min-width: $vp-768) {
+    padding: 0;
+
+    border: none;
+  }
+
   &::before {
     content: "";
-    display: inline-flex;
 
+    display: block;
     width: 60px;
     height: 26px;
 
@@ -100,5 +177,11 @@
 }
 
 .slider__button {
-  width: 100%;
+  width: 260px;
+
+  @media (min-width: $vp-768) {
+    width: auto;
+    order: -1;
+    align-self: start;
+  }
 }

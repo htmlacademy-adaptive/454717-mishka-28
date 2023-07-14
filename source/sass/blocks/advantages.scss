@@ -20,6 +20,7 @@
 
 .advantages__list {
   display: grid;
+  grid-auto-flow: dense;
   margin: 0;
   padding: 0;
 
@@ -29,8 +30,6 @@
 
   @media (min-width: $vp-768) {
     gap: 57px 70px;
-    grid-auto-flow: column;
-    grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 40% 1fr;
   }
 }
@@ -45,6 +44,10 @@
 
   @media (min-width: $vp-768) {
     line-height: 22px;
+
+    &:nth-child(-n+3) {
+      grid-column-start: 1;
+    }
   }
 
   &::before {
@@ -88,6 +91,10 @@
     &::before {
       background-image: url("../img/stack.svg#handmade");
       background-size: 35px 34px;
+
+      @media (min-width: $vp-768) {
+        left: -9px;
+      }
     }
   }
 
