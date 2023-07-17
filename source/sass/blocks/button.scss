@@ -35,4 +35,10 @@
       color: rgba($color-white, 0.3);
     }
   }
+
+  &--bright {
+    color: $color-white;
+    background-color: $color-downy;
+    padding: 18px;
+  }
 }

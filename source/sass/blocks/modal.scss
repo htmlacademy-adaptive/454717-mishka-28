@@ -1,12 +1,14 @@
 .modal {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 5;
+
+  display: none;
   width: 100%;
   height: 100%;
+
   background-color: rgba($color-white, 0.9);
-  z-index: 5;
 
   &--opened {
     display: flex;
@@ -15,5 +17,10 @@
 
 .modal__content {
   position: relative;
+
   margin: auto;
+
+  background: $color-white;
+  outline: 1px solid $color-silver;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
 }

@@ -143,6 +143,10 @@
     border: none;
   }
 
+  &:focus-visible {
+    z-index: 1;
+  }
+
   &::before {
     content: "";
 

@@ -62,6 +62,7 @@
   margin: 0 0 30px 0;
 
   @media (min-width: $vp-768) {
+    margin-top: 3px;
     margin-bottom: 26px;
 
     grid-area: content;
@@ -76,6 +77,7 @@
   color: $color-charcoal;
 
   @media (min-width: $vp-768) {
+    margin-bottom: 40px;
     font-size: 17px;
     line-height: 30px;
   }
