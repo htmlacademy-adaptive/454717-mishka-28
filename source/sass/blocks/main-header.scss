@@ -105,8 +105,12 @@
   }
 
   @media (min-width: $vp-1150) {
-    gap: 15px 40px;
-    grid-template-columns: 58% 1fr;
+    display: grid;
+    grid-template-columns: 1fr 149px 1fr;
+
+    grid-template-areas:
+      "nav             logo  user-nav"
+      "additional-nav  .     text";
   }
 
   .no-js & {
@@ -124,12 +128,7 @@
   justify-items: center;
 
   @media (min-width: $vp-1150) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding-top: 0;
-
-    gap: 0 20px;
+    display: contents;
   }
 }
 
@@ -142,6 +141,7 @@
   }
 
   @media (min-width: $vp-1150) {
+    grid-area: logo;
     margin: 9px 0 0 0;
   }
 
@@ -169,8 +169,11 @@
   }
 
   @media (min-width: $vp-1150) {
+    grid-area: nav;
     order: -1;
     width: 430px;
+    display: grid;
+    grid-template-columns: 43% 1fr;
   }
 
   .is-open &,
@@ -184,10 +187,14 @@
 }
 
 .main-header__nav-item {
-  padding-right: 35px;
+  @media (min-width: $vp-1150) {
+    padding-right: 20px;
+  }
 
-  &:first-child {
-    border-right: 1px solid rgba($color-black, 0.1);
+  &:nth-child(odd) {
+    @media (min-width: $vp-1150) {
+      border-right: 1px solid rgba($color-black, 0.1);
+    }
   }
 }
 
@@ -234,14 +241,23 @@
   display: none;
 
   @media (min-width: $vp-1150) {
-    display: flex;
-    flex-wrap: wrap;
+    grid-area: additional-nav;
+    display: grid;
+    grid-template-columns: 43% 1fr;
+
+    width: 430px;
     margin: 0;
-    padding: 0;
+    padding: 2px 0;
 
     list-style-type: none;
 
-    gap: 10px 45px;
+    gap: 0 37px;
+  }
+}
+
+.main-header__additional-nav-item {
+  @media (min-width: $vp-1150) {
+    padding-right: 20px;
   }
 }
 
@@ -258,6 +274,11 @@
   &:active {
     color: rgba($color-black, 0.3);
   }
+
+  @media (min-width: $vp-1150) {
+    display: block;
+    padding: 18px 0;
+  }
 }
 
 .main-header__user-nav-wrapper {
@@ -268,6 +289,10 @@
     align-content: start;
 
     gap: 20px;
+  }
+
+  @media (min-width: $vp-1150) {
+    display: contents;
   }
 
   .is-open &,
@@ -287,6 +312,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
+  }
+
+  @media (min-width: $vp-1150) {
+    grid-area: user-nav;
   }
 
   &::before {
@@ -411,5 +440,11 @@
     font-size: 15px;
     text-align: right;
     color: $color-charcoal;
+  }
+
+  @media (min-width: $vp-1150) {
+    grid-area: text;
+
+    margin-top: 21px;
   }
 }

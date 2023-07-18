@@ -31,6 +31,14 @@
       "button      img      img";
     grid-template-columns: 1fr 180px 113px;
   }
+
+  @media (min-width: $vp-1150) {
+    padding-top: 0;
+
+    gap: 58px 33px;
+    grid-template-areas: none;
+    grid-template-columns: 132px 1fr 525px;
+  }
 }
 
 .week-product__title {
@@ -42,6 +50,11 @@
     margin: 6px 12px 0 0;
 
     grid-area: title;
+  }
+
+  @media (min-width: $vp-1150) {
+    grid-area: initial;
+    order: -1;
   }
 }
 
@@ -56,6 +69,13 @@
 
     grid-area: subtitle;
   }
+
+  @media (min-width: $vp-1150) {
+    grid-area: initial;
+    grid-column: 2/-1;
+    grid-row-start: 1;
+    z-index: 1;
+  }
 }
 
 .week-product__content {
@@ -66,6 +86,10 @@
     margin-bottom: 26px;
 
     grid-area: content;
+  }
+
+  @media (min-width: $vp-1150) {
+    grid-area: initial;
   }
 }
 
@@ -117,6 +141,12 @@
 
     grid-area: img;
   }
+
+  @media (min-width: $vp-1150) {
+    grid-area: initial;
+    grid-column-end: -1;
+    grid-row: 1/-1;
+  }
 }
 
 .week-product__img {
@@ -136,6 +166,10 @@
 
     grid-area: price;
   }
+
+  @media (min-width: $vp-1150) {
+    grid-area: initial;
+  }
 }
 
 .week-product__button {
@@ -147,5 +181,9 @@
     margin-top: auto;
 
     grid-area: button;
+  }
+
+  @media (min-width: $vp-1150) {
+    grid-area: initial;
   }
 }
