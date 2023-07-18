@@ -19,6 +19,12 @@
   flex-grow: 1;
 }
 
+.page__hero {
+  @media (min-width: $vp-1150) {
+    margin-bottom: 72px;
+  }
+}
+
 .page__advantages {
   margin-bottom: 58px;
 

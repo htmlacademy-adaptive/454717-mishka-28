@@ -6,6 +6,12 @@
   @media (min-width: $vp-768) {
     padding-top: 57px;
   }
+
+  @media (min-width: $vp-1150) {
+    padding-right: 250px;
+    padding-left: 225px;
+    padding-top: 64px;
+  }
 }
 
 .advantages__title {
@@ -31,6 +37,11 @@
   @media (min-width: $vp-768) {
     gap: 57px 70px;
     grid-template-columns: 40% 1fr;
+  }
+
+  @media (min-width: $vp-768) {
+    gap: 57px 70px;
+    grid-template-columns: 1fr 48%;
   }
 }
 

@@ -9,6 +9,11 @@
   @media (min-width: $vp-768) {
     background-size: 772px 17px;
   }
+
+  @media (min-width: $vp-1150) {
+    background-size: 1050px 32px;
+    position: relative;
+  }
 }
 
 .week-product__wrapper {
@@ -33,11 +38,16 @@
   }
 
   @media (min-width: $vp-1150) {
-    padding-top: 0;
+    padding-top: 61px;
+    padding-bottom: 100px;
 
-    gap: 58px 33px;
-    grid-template-areas: none;
-    grid-template-columns: 132px 1fr 525px;
+    gap: 33px 43px;
+    grid-template-areas:
+      "title  subtitle"
+      "title  content"
+      ".      price"
+      ".      button";
+    grid-template-columns: 132px 1fr;
   }
 }
 
@@ -53,7 +63,7 @@
   }
 
   @media (min-width: $vp-1150) {
-    grid-area: initial;
+    margin: 8px 0 0 31px;
     order: -1;
   }
 }
@@ -69,13 +79,6 @@
 
     grid-area: subtitle;
   }
-
-  @media (min-width: $vp-1150) {
-    grid-area: initial;
-    grid-column: 2/-1;
-    grid-row-start: 1;
-    z-index: 1;
-  }
 }
 
 .week-product__content {
@@ -89,7 +92,8 @@
   }
 
   @media (min-width: $vp-1150) {
-    grid-area: initial;
+    width: 292px;
+    margin-bottom: 80px;
   }
 }
 
@@ -104,6 +108,10 @@
     margin-bottom: 40px;
     font-size: 17px;
     line-height: 30px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin-bottom: 50px;
   }
 }
 
@@ -144,14 +152,22 @@
 
   @media (min-width: $vp-1150) {
     grid-area: initial;
-    grid-column-end: -1;
-    grid-row: 1/-1;
   }
 }
 
 .week-product__img {
   display: block;
   width: 100%;
+
+  @media (min-width: $vp-1150) {
+    position: absolute;
+    top: 0;
+    right: 50px;
+
+    max-width: 525px;
+
+    z-index: -1;
+  }
 }
 
 .week-product__price {
@@ -168,7 +184,8 @@
   }
 
   @media (min-width: $vp-1150) {
-    grid-area: initial;
+    width: 292px;
+    margin-top: auto;
   }
 }
 
@@ -184,6 +201,7 @@
   }
 
   @media (min-width: $vp-1150) {
-    grid-area: initial;
+    width: 292px;
+    margin: 0;
   }
 }

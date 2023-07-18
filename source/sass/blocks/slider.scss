@@ -7,12 +7,30 @@
   background-size: 320px 6px;
 
   @media (min-width: $vp-768) {
+    position: relative;
     padding-bottom: 85px;
 
-    background-image: url("../img/stack.svg#zigzag-line"), url("../img/background/review-background@1x.jpg");
-    background-repeat: repeat-x, no-repeat;
-    background-position: center bottom, left top;
-    background-size: 772px 17px, 350px 457px;
+    background-image: url("../img/stack.svg#zigzag-line");
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    background-size: 772px 17px;
+  }
+
+  &::before {
+    @media (min-width: $vp-768) {
+      content: "";
+      width: 350px;
+      height: 457px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../img/background/review-background@1x.jpg");
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: $vp-768) {
+      left: 50px;
+    }
   }
 }
 
@@ -30,6 +48,10 @@
 
     gap: 38px;
     grid-template-columns: 1fr 173px;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding-left: 224px;
   }
 }
 
