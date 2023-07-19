@@ -8,6 +8,7 @@
 
   @media (min-width: $vp-768) {
     position: relative;
+
     padding-bottom: 85px;
 
     background-image: url("../img/stack.svg#zigzag-line");
@@ -16,21 +17,10 @@
     background-size: 772px 17px;
   }
 
-  &::before {
-    @media (min-width: $vp-768) {
-      content: "";
-      width: 350px;
-      height: 457px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-image: url("../img/background/review-background@1x.jpg");
-      background-repeat: no-repeat;
-    }
+  @media (min-width: $vp-1150) {
+    padding-bottom: 95px;
 
-    @media (min-width: $vp-768) {
-      left: 50px;
-    }
+    background-size: 1052px 32px;
   }
 }
 
@@ -51,7 +41,31 @@
   }
 
   @media (min-width: $vp-1150) {
+    padding-top: 79px;
     padding-left: 224px;
+    padding-bottom: 94px;
+
+    gap: 34px;
+  }
+
+  &::before {
+    @media (min-width: $vp-768) {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      width: 350px;
+      height: 457px;
+
+      background-image: url("../img/background/review-background@1x.jpg");
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: $vp-1150) {
+      left: 50px;
+    }
   }
 }
 
@@ -93,9 +107,13 @@
   color: $color-charcoal;
 
   @media (min-width: $vp-768) {
-    margin: 0 0 62px;
+    margin-bottom: 62px;
 
     font-size: 17px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin-bottom: 45px;
   }
 }
 
@@ -104,6 +122,10 @@
 
   @media (min-width: $vp-768) {
     max-width: 457px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin: 0;
   }
 }
 
@@ -150,6 +172,10 @@
 
     gap: 30px;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $vp-1150) {
+    bottom: 111px;
   }
 }
 
@@ -206,8 +232,8 @@
   width: 260px;
 
   @media (min-width: $vp-768) {
-    width: auto;
     order: -1;
     align-self: start;
+    width: auto;
   }
 }

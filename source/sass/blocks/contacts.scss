@@ -1,3 +1,15 @@
+.contacts {
+  @media (min-width: $vp-1150) {
+    display: grid;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 66px 50px 105px 224px;
+
+    gap: 30px;
+    grid-template-columns: 1fr 527px;
+  }
+}
+
 .contacts__container {
   padding-top: 38px;
   padding-bottom: 62px;
@@ -7,6 +19,10 @@
   @media (min-width: $vp-768) {
     padding-top: 69px;
     padding-bottom: 48px;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding: 79px 0 0 0;
   }
 }
 
@@ -20,6 +36,12 @@
     margin: 0 3px 40px 0;
 
     gap: 20px;
+  }
+
+  @media (min-width: $vp-1150) {
+    position: relative;
+
+    margin: 0 0 35px 0;
   }
 
   &::after {
@@ -36,6 +58,12 @@
       background-image: url("../img/stack.svg#flag");
       background-repeat: no-repeat;
       background-position: center;
+    }
+
+    @media (min-width: $vp-1150) {
+      position: absolute;
+      top: 5px;
+      left: -111px;
     }
   }
 }
@@ -56,6 +84,11 @@
 
     gap: 25px;
     grid-template-columns: 1fr 50%;
+  }
+
+  @media (min-width: $vp-1150) {
+    gap: 30px;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -80,6 +113,10 @@
     text-underline-offset: 8px;
   }
 
+  @media (min-width: $vp-768) {
+    text-underline-offset: 12px;
+  }
+
   &:hover {
     color: $color-puerto-rico-2;
 
@@ -102,6 +139,13 @@
   @media (min-width: $vp-768) {
     height: 457px;
     margin-bottom: 55px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin: 0;
+
+    grid-column: 2/3;
+    grid-row: 1/3;
   }
 }
 
@@ -137,5 +181,10 @@
 
   @media (min-width: $vp-768) {
     width: 230px;
+  }
+
+  @media (min-width: $vp-1150) {
+    align-self: end;
+    margin: 0;
   }
 }
