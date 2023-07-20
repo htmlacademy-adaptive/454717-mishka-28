@@ -30,6 +30,10 @@
   margin: 0 auto;
 
   border-bottom: 1px solid $color-whisper-e5;
+
+  @media (min-width: $vp-768) {
+    border: none;
+  }
 }
 
 .page-footer__copyright {

@@ -23,6 +23,18 @@
   @media (min-width: $vp-1150) {
     margin-bottom: 72px;
   }
+
+  &--inner {
+    margin-bottom: 30px;
+
+    @media (min-width: $vp-768) {
+      margin-bottom: 80px;
+    }
+
+    @media (min-width: $vp-1150) {
+      margin-bottom: 130px;
+    }
+  }
 }
 
 .page__advantages {

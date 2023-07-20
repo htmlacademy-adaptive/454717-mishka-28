@@ -26,6 +26,19 @@
     }
   }
 
+  &--inner {
+    padding-top: 73px;
+    padding-bottom: 73px;
+
+    @media (min-width: $vp-768) {
+      padding-top: 37px;
+    }
+
+    @media (min-width: $vp-1150) {
+      padding-bottom: 96px;
+    }
+  }
+
   &::after {
     @media (min-width: $vp-768) {
       content: "";

@@ -10,6 +10,12 @@
 
     background-color: #fafafa;
   }
+
+  &--inner {
+    @media (min-width: $vp-768) {
+      background-color: $color-white-smoke;
+    }
+  }
 }
 
 .main-header__toggle {
