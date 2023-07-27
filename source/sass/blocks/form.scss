@@ -9,7 +9,14 @@
   }
 }
 
+.form__container {
+  @include leveler;
+}
+
 .form__description {
+  margin: 0 0 29px 0;
+
+  font-weight: 400;
   font-size: 13px;
   line-height: 24px;
   color: $color-charcoal;
@@ -20,23 +27,115 @@
   }
 }
 
+.form__group {
+  margin: 0 0 34px 0;
+  padding: 0;
+
+  border: none;
+  border-top: 1px solid $color-downy-2;
+
+  &--user-contacts {
+    border-top: none;
+  }
+
+  &--type {
+    margin-bottom: 30px;
+  }
+
+  &--color {
+    margin-bottom: 30px;
+  }
+
+  &--textarea {
+    margin-bottom: 14px;
+  }
+}
+
+.form__field {
+  position: relative;
+}
+
 .form__legend {
+  min-width: 60px;
+  margin-bottom: 30px;
+  padding: 0 18px 0 0;
+
   @include special-text;
+
+  &--label {
+    display: inline-flex;
+    margin-bottom: 0;
+
+    background-color: $color-white;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: currentColor;
+    }
+  }
+
+  .form__group--type & {
+    margin-bottom: 28px;
+  }
+
+  .form__group--color & {
+    margin-bottom: 23px;
+  }
+
+  .form__group--textarea & {
+    margin-bottom: 19px;
+  }
+}
+
+.form__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  gap: 22px;
+
+  .form__group--type & {
+    gap: 13px;
+  }
+
+  .form__group--color & {
+    gap: 23px;
+  }
+
+  .form__group--user-contacts & {
+    gap: 34px;
+  }
+}
+
+.form__button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .form__info {
+  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: $color-charcoal;
 
   @media (min-width: $vp-768) {
-    text-align: right;
     font-size: 17px;
     line-height: 30px;
+    text-align: right;
   }
 }
 
 .form__button {
-  padding-top: 18px;
-  padding-bottom: 18px;
+  font-size: 17px;
 }

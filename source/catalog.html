@@ -58,10 +58,10 @@
     </div>
   </header>
   <main class="page__page-main">
-    <section class="page__hero page__hero--inner hero hero--inner">
+    <section class="page__hero page__hero--catalog hero hero--inner">
       <h1 class="hero__title">Каталог товаров</h1>
     </section>
-    <section class="catalog">
+    <section class="page__catalog catalog">
       <h2 class="visually-hidden">Популярные товары</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
@@ -80,7 +80,7 @@
             <p class="catalog__description">Рост 30 см, вес 200 г</p>
             <div class="catalog__wrapper">
               <span class="catalog__price">1 200 руб.</span>
-              <a class="catalog__cart-button" href="javascript:undefined;">
+              <a class="catalog__cart-button open-button" href="javascript:undefined;">
                 <span class="visually-hidden">Добавить в корзину.</span>
               </a>
             </div>
@@ -102,7 +102,7 @@
             <p class="catalog__description">Диаметр 15 см, высота 10 см</p>
             <div class="catalog__wrapper">
               <span class="catalog__price">690 руб.</span>
-              <a class="catalog__cart-button" href="javascript:undefined;">
+              <a class="catalog__cart-button open-button" href="javascript:undefined;">
                 <span class="visually-hidden">Добавить в корзину.</span>
               </a>
             </div>
@@ -124,7 +124,7 @@
             <p class="catalog__description">Диаметр 30 см, высота 30 см</p>
             <div class="catalog__wrapper">
               <span class="catalog__price">1 500 руб.</span>
-              <a class="catalog__cart-button" href="javascript:undefined;">
+              <a class="catalog__cart-button open-button" href="javascript:undefined;">
                 <span class="visually-hidden">Добавить в корзину.</span>
               </a>
             </div>
@@ -132,23 +132,25 @@
         </li>
       </ul>
     </section>
-    <section class="manufacturing">
-      <h2 class="manufacturing__title">Процесс производства</h2>
-      <div class="manufacturing__player">
-        <picture class="manufacturing__preview-wrapper">
-          <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/preview-desktop@1x.webp 1x, img/content/preview-desktop@2x.webp 2x" width="683" height="455">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/content/preview-tablet@1x.webp 1x, img/content/preview-tablet@2x.webp 2x" width="668" height="455">
-          <source type="image/webp" srcset="img/content/cpreview-mobile@1x.webp 1x, img/content/preview-mobile@2x.webp 2x" width="260" height="150">
-          <source media="(min-width: 1150px)" srcset="img/content/preview-desktop@1x.jpg 1x, img/content/preview-desktop@2x.jpg 2x" width="683" height="455">
-          <source media="(min-width: 768px)" srcset="img/content/preview-tablet@1x.jpg 1x, img/content/preview-tablet@2x.jpg 2x" width="668" height="455">
-          <img class="manufactiring__preview" src="img/content/preview-mobile@1x.jpg" srcset="img/content/preview-mobile@2x.jpg 2x" width="260" height="150" alt="Процесс производства наших товаров.">
-        </picture>
-        <a class="manufacturing__player-control" href="javascript:undefined;">
-          <span class="visually-hidden">Начать показ.</span>
-        </a>
+    <section class="page__manufacturing manufacturing">
+      <div class="manufactiring__wrapper">
+        <h2 class="manufacturing__title">Процесс производства</h2>
+        <div class="manufacturing__player">
+          <picture class="manufacturing__preview-wrapper">
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/preview-desktop@1x.webp 1x, img/content/preview-desktop@2x.webp 2x" width="683" height="455">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/content/preview-tablet@1x.webp 1x, img/content/preview-tablet@2x.webp 2x" width="668" height="455">
+            <source type="image/webp" srcset="img/content/preview-mobile@1x.webp 1x, img/content/preview-mobile@2x.webp 2x" width="260" height="150">
+            <source media="(min-width: 1150px)" srcset="img/content/preview-desktop@1x.jpg 1x, img/content/preview-desktop@2x.jpg 2x" width="683" height="455">
+            <source media="(min-width: 768px)" srcset="img/content/preview-tablet@1x.jpg 1x, img/content/preview-tablet@2x.jpg 2x" width="668" height="455">
+            <img class="manufactiring__preview" src="img/content/preview-mobile@1x.jpg" srcset="img/content/preview-mobile@2x.jpg 2x" width="260" height="150" alt="Процесс производства наших товаров.">
+          </picture>
+          <a class="manufacturing__player-control" href="javascript:undefined;">
+            <span class="visually-hidden">Начать показ.</span>
+          </a>
+        </div>
+        <p class="manufacturing__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="manufacturing__button button button--neutral" href="javascript:undefined;">Сделать заказ</a>
       </div>
-      <p class="manufacturing__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-      <a class="manufacturing__button button button--neutral" href="javascript:undefined;">Сделать заказ</a>
     </section>
   </main>
   <footer class="page__page-footer page-footer">
@@ -183,6 +185,37 @@
       </a>
     </div>
   </footer>
+  <div class="modal">
+    <section class="modal__content modal__to-cart to-cart">
+      <h2 class="to-cart__title">Добавить в&nbsp;корзину</h2>
+      <form class="to-cart__form" action="https://echo.htmlacademy.ru/" method="post">
+        <fieldset class="to-cart__group">
+          <legend class="to-cart__legend">Выберите размер:</legend>
+          <ul class="to-cart__list">
+            <li class="to-cart__item">
+              <label class="to-cart__element">
+                <input class="to-cart__radio visually-hidden" type="radio" name="size" value="s" checked>
+                <span class="to-cart__radio-text">s</span>
+              </label>
+            </li>
+            <li class="to-cart__item">
+              <label class="to-cart__element">
+                <input class="to-cart__radio visually-hidden" type="radio" name="size" value="m">
+                <span class="to-cart__radio-text">m</span>
+              </label>
+            </li>
+            <li class="to-cart__item">
+              <label class="to-cart__element">
+                <input class="to-cart__radio visually-hidden" type="radio" name="size" value="l">
+                <span class="to-cart__radio-text">l</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="to-cart__button button button--bright" type="submit">Добавить</button>
+      </form>
+    </section>
+  </div>
   <script src="js/script.js"></script>
 </body>
 

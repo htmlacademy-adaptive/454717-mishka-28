@@ -42,8 +42,8 @@
 
   @media (min-width: $vp-1150) {
     padding-top: 79px;
-    padding-left: 224px;
     padding-bottom: 94px;
+    padding-left: 224px;
 
     gap: 34px;
   }
@@ -184,6 +184,7 @@
 
   background-color: $color-white;
   border: 1px solid $color-whisper;
+  cursor: pointer;
 
   @media (min-width: $vp-768) {
     padding: 0;

@@ -16,7 +16,7 @@
 </head>
 
 <body class="page">
-  <header class="page__main-header main-header no-js">
+  <header class="page__main-header main-header main-header--inner no-js">
     <button class="main-header__toggle" type="button">
       <span class="visually-hidden">Открыть или закрыть меню навигации по сайту.</span>
     </button>
@@ -58,14 +58,14 @@
     </div>
   </header>
   <main class="page__page-main">
-    <section class="page__hero hero">
+    <section class="page__hero page__hero--form hero hero--inner">
       <h1 class="hero__title">Вязание на заказ</h1>
     </section>
     <form class="page__form form" action="https://echo.htmlacademy.ru/" method="post">
       <div class="form__container">
         <h2 class="visually-hidden">Оформить заказ</h2>
         <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <fieldset class="form__group">
+        <fieldset class="form__group form__group--type">
           <legend class="form__legend">Тип</legend>
           <ul class="form__list">
             <li class="form__item">
@@ -82,7 +82,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__group">
+        <fieldset class="form__group form__group--color">
           <legend class="form__legend">Цвет</legend>
           <ul class="form__list form__list--columns">
             <li class="form__item">
@@ -123,7 +123,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__group">
+        <fieldset class="form__group form__group--user-info">
           <legend class="form__legend">ФИО</legend>
           <ul class="form__list">
             <li class="form__item">
@@ -146,22 +146,24 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__group">
+        <fieldset class="form__group form__group--user-contacts">
           <legend class="visually-hidden">Контактые данные</legend>
           <ul class="form__list">
             <li class="form__item">
               <div class="form__field input input--has-icon input--icon-tel">
-                <label for="user-tel" class="form__legend">Тел</label>
+                <label for="user-tel" class="form__legend form__legend--label input__label">Тел</label>
                 <p class="input__input-wrapper">
                   <input class="input__input" type="tel" name="user-tel" id="user-tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                  <span class="input__icon"></span>
                 </p>
               </div>
             </li>
             <li class="form__item">
               <div class="form__field input input--has-icon input--icon-email">
-                <label for="user-email" class="form__legend">E-mail</label>
+                <label for="user-email" class="form__legend form__legend--label input__label">E-mail</label>
                 <p class="input__input-wrapper">
                   <input class="input__input" type="email" name="user-email" id="user-email" placeholder="Ваш Email*" required>
+                  <span class="input__icon"></span>
                 </p>
               </div>
             </li>

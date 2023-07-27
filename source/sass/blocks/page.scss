@@ -24,7 +24,7 @@
     margin-bottom: 72px;
   }
 
-  &--inner {
+  &--catalog {
     margin-bottom: 30px;
 
     @media (min-width: $vp-768) {
@@ -34,6 +34,10 @@
     @media (min-width: $vp-1150) {
       margin-bottom: 130px;
     }
+  }
+
+  &--form {
+    margin-bottom: 17px;
   }
 }
 
@@ -55,6 +59,22 @@
   @media (min-width: $vp-768) {
     margin-bottom: 57px;
   }
+}
+
+.page__catalog {
+  margin-bottom: 30px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 53px;
+  }
+}
+
+.page__manufacturing {
+  margin-bottom: 58px;
+}
+
+.page__form {
+  margin-bottom: 55px;
 }
 
 .page__page-footer {

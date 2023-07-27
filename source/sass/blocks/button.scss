@@ -25,6 +25,8 @@
 
     border: 2px solid $color-charcoal;
 
+    transition: color 0.3s, background-color 0.3s;
+
     &:hover {
       color: $color-white;
 
@@ -37,8 +39,20 @@
   }
 
   &--bright {
-    color: $color-white;
-    background-color: $color-downy;
     padding: 18px;
+
+    color: $color-white;
+
+    background-color: $color-downy;
+
+    transition: opacity 0.3s, background-color 0.3s;
+
+    &:hover {
+      background-color: $color-puerto-rico;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 }

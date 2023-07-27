@@ -61,5 +61,14 @@
 }
 
 .page-footer__copyright-logo {
+  color: $color-downy;
   flex-shrink: 0;
+}
+
+.page-footer__copyright:hover .page-footer__copyright-logo {
+  color: $color-puerto-rico-2;
+}
+
+.page-footer__copyright:active .page-footer__copyright-logo {
+  opacity: 0.3;
 }

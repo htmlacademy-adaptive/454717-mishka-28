@@ -1,154 +1,92 @@
-.input__input {
-  padding: 16px 18px 18px 18px;
+.input__label {
+  cursor: pointer;
+}
 
-  font-size: 19px;
-  line-height: 18px;
+.input__input-wrapper {
+  position: relative;
+
+  margin: 0;
+}
+
+.input__input {
+  width: 100%;
+  padding: 14px 0;
+
+  font-size: 17px;
+  line-height: 23px;
   font-family: inherit;
   color: $color-charcoal;
 
   background-color: $color-white;
   border: none;
+  border-radius: 0;
   box-shadow: inset 0 -2px 0 0 $color-black;
 
   ::placeholder {
     color: rgba($color-black, 0.3);
+    opacity: 1;
+  }
+
+  &:hover {
+    box-shadow: inset 0 -2px 0 0 $color-downy-2;
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: inset 0 -2px 0 0 $color-downy-2;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+
+    pointer-events: none;
+  }
+
+  .input--has-icon & {
+    padding-right: 50px;
+    padding-bottom: 16px;
   }
 }
 
-// .input {
-//   display: flex;
-//   flex-wrap: wrap;
-//   align-items: center;
+.input__icon {
+  position: absolute;
 
-//   gap: 12px;
+  background-color: rgba($color-black, 0.2);
 
-//   &--has-icon {
-//     @media (min-width: $vp-768) {
-//       gap: 22px;
-//     }
-//   }
-// }
+  mask-position: center;
+  mask-repeat: no-repeat;
 
-// .input__text {
-//   line-height: 18px;
-//   color: $color-charcoal;
-//   text-transform: uppercase;
+  .input--icon-tel & {
+    top: 12px;
+    right: 7px;
 
-//   @media (min-width: $vp-768) {
-//     line-height: 30px;
-//   }
-// }
+    width: 25px;
+    height: 24px;
 
-// .input__input-wrapper {
-//   position: relative;
+    mask-image: url("../img/stack.svg#phone");
+  }
 
-//   flex-grow: 1;
-//   margin: 0;
+  .input--icon-email & {
+    top: 17px;
+    right: 3px;
 
-//   .input--has-icon & {
-//     &::after {
-//       content: "";
-//       position: absolute;
-//       top: 12px;
-//       right: 15px;
-//       z-index: 1;
+    width: 32px;
+    height: 21px;
 
-//       width: 20px;
-//       height: 20px;
+    mask-image: url("../img/stack.svg#mail");
+  }
+}
 
-//       background-color: $color-nero;
+.input__input:hover + .input__icon {
+  background-color: $color-downy-2;
+}
 
-//       mask-position: center;
-//       mask-repeat: no-repeat;
+.input__input:focus-visible + .input__icon {
+  background-color: $color-downy-2;
+}
 
-//       @media (min-width: $vp-768) {
-//         top: 17px;
-//         right: 17px;
-//       }
-
-//       @media (min-width: $vp-1300) {
-//         top: 16px;
-//         right: 20px;
-//       }
-//     }
-//   }
-// }
-
-// .input--icon-email .input__input-wrapper::after {
-//   mask-image: url("../img/stack.svg#letter");
-// }
-
-// .input--icon-tel .input__input-wrapper::after {
-//   mask-image: url("../img/stack.svg#phone");
-// }
-
-// .input__input-wrapper:focus-within::after {
-//   background-color: $color-apple;
-// }
-
-// .input--has-icon .input__input-wrapper--error::after {
-//   background-color: $color-light-coral;
-// }
-
-// .input__input {
-//   width: 100%;
-//   padding: 13px 14px 12px 20px;
-
-//   font: inherit;
-//   line-height: 18px;
-//   color: $color-charcoal;
-//   text-transform: uppercase;
-
-//   background-color: transparent;
-//   border: 1px solid $color-whisper-e7;
-//   border-radius: 0;
-
-//   appearance: textfield;
-
-//   @media (min-width: $vp-768) {
-//     padding: 10px 14px 10px 20px;
-
-//     line-height: 30px;
-//   }
-
-//   &::placeholder {
-//     opacity: 1;
-//   }
-
-//   &:hover {
-//     border-color: $color-very-light-grey;
-//   }
-
-//   &:focus {
-//     border-color: $color-charcoal;
-//     outline: 1px solid $color-charcoal;
-//   }
-
-//   &:disabled {
-//     opacity: 0.3;
-//     pointer-events: none;
-//   }
-
-//   &::-webkit-outer-spin-button,
-//   &::-webkit-inner-spin-button {
-//     appearance: none;
-//   }
-
-//   .input__input-wrapper--error &[required] {
-//     border-color: $color-light-coral;
-//     outline: 1px solid $color-light-coral;
-//   }
-
-//   .input--has-icon & {
-//     padding: 13px 45px 13px 15px;
-
-//     @media (min-width: $vp-768) {
-//       padding: 11px 55px 11px 20px;
-//     }
-
-//     @media (min-width: $vp-1300) {
-//       padding-top: 10px;
-//       padding-bottom: 10px;
-//     }
-//   }
-// }
+@supports not selector(:focus-visible) {
+  .input__input:focus + .input__icon {
+    background-color: $color-downy-2;
+  }
+}
