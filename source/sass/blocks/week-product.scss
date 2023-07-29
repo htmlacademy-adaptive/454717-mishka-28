@@ -11,10 +11,11 @@
     padding-bottom: 67px;
 
     gap: 33px 42px;
-    grid-template-areas: "subtitle    subtitle title"
-    "content     img      img"
-    "price       img      img"
-    "button      img      img";
+    grid-template-areas:
+      "subtitle    subtitle title"
+      "content     img      img"
+      "price       img      img"
+      "button      img      img";
     grid-template-columns: 1fr 180px 113px;
   }
 
@@ -25,10 +26,11 @@
     padding-bottom: 100px;
 
     gap: 33px 43px;
-    grid-template-areas: "title  subtitle"
-    "title  content"
-    ".      price"
-    ".      button";
+    grid-template-areas:
+      "title  subtitle"
+      "title  content"
+      ".      price"
+      ".      button";
     grid-template-columns: 132px 1fr;
   }
 }
