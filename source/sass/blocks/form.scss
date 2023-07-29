@@ -21,7 +21,7 @@
   line-height: 24px;
   color: $color-charcoal;
 
-  @media (min-width: $vp-1150) {
+  @media (min-width: $vp-768) {
     font-size: 17px;
     line-height: 30px;
   }
@@ -33,6 +33,12 @@
 
   border: none;
   border-top: 1px solid $color-downy-2;
+
+  @media (min-width: $vp-768) {
+    border-top: none;
+    display: grid;
+    grid-template-columns: 167px 1fr;
+  }
 
   &--user-contacts {
     border-top: none;
