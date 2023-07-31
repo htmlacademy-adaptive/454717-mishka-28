@@ -6,9 +6,9 @@ mainНeader.classList.remove('no-js');
 mainHeaderToggle.addEventListener('click', () => mainНeader.classList.toggle('is-open'));
 
 const modal = document.querySelector(".modal");
-const openButton = document.querySelector(".open-button");
+const openButtons = document.querySelectorAll(".open-button");
 
-openButton.addEventListener("click", () => modal.classList.add("modal--opened"));
+openButtons.forEach((el) => el.addEventListener("click", () => modal.classList.add("modal--opened")));
 
 modal.addEventListener("click", (evt) => {
   if (!evt.target.closest(".modal__content")) {

@@ -1,11 +1,30 @@
+.input {
+  @media (min-width: $vp-768) {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 25px;
+  }
+}
+
 .input__label {
   cursor: pointer;
+
+  @media (min-width: $vp-768) {
+    font-size: 19px;
+    line-height: 30px;
+  }
 }
 
 .input__input-wrapper {
   position: relative;
 
   margin: 0;
+
+  @media (min-width: $vp-768) {
+    display: flex;
+    margin-top: 6px;
+  }
 }
 
 .input__input {
@@ -17,13 +36,23 @@
   font-family: inherit;
   color: $color-charcoal;
 
-  background-color: $color-white;
+  background-color: transparent;
   border: none;
   border-radius: 0;
   box-shadow: inset 0 -2px 0 0 $color-black;
 
+  @media (min-width: $vp-768) {
+    flex-grow: 1;
+    width: auto;
+    padding: 0 18px 12px;
+
+    font-size: 19px;
+    line-height: 30px;
+  }
+
   ::placeholder {
     color: rgba($color-black, 0.3);
+
     opacity: 1;
   }
 
@@ -64,6 +93,15 @@
     height: 24px;
 
     mask-image: url("../img/stack.svg#phone");
+
+    @media (min-width: $vp-768) {
+      top: 5px;
+      right: 26px;
+    }
+
+    @media (min-width: $vp-1150) {
+      right: 8px;
+    }
   }
 
   .input--icon-email & {
@@ -74,6 +112,15 @@
     height: 21px;
 
     mask-image: url("../img/stack.svg#mail");
+
+    @media (min-width: $vp-768) {
+      top: 10px;
+      right: 22px;
+    }
+
+    @media (min-width: $vp-1150) {
+      right: 4px;
+    }
   }
 }
 

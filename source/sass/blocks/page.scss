@@ -43,9 +43,10 @@
     }
 
     @media (min-width: $vp-1150) {
-      height: 32px;
       right: 50px;
       left: 50px;
+
+      height: 32px;
 
       background-size: 1050px 32px;
     }
@@ -74,6 +75,10 @@
 
     @media (min-width: $vp-768) {
       margin-bottom: 67px;
+    }
+
+    @media (min-width: $vp-1150) {
+      margin-bottom: 115px;
     }
   }
 }
@@ -116,6 +121,10 @@
 
 .page__form {
   margin-bottom: 55px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 50px;
+  }
 }
 
 .page__page-footer {

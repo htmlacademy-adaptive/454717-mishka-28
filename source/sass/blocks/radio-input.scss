@@ -3,6 +3,10 @@
   align-items: center;
 
   grid-template-columns: 40px 1fr;
+
+  @media (min-width: $vp-768) {
+    grid-template-columns: 50px 1fr;
+  }
 }
 
 .radio-input__input {
@@ -16,6 +20,11 @@
   border: 2px solid $color-charcoal;
   border-radius: 50%;
   cursor: pointer;
+
+  @media (min-width: $vp-768) {
+    width: 50px;
+    height: 50px;
+  }
 
   appearance: none;
 
@@ -43,6 +52,11 @@
 
     background-color: $color-downy-2;
     border-radius: 50%;
+
+    @media (min-width: $vp-768) {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
@@ -54,6 +68,12 @@
   padding: 3px 0 0 19px;
 
   cursor: pointer;
+
+  @media (min-width: $vp-768) {
+    padding: 0 0 0 27px;
+    font-size: 19px;
+    line-height: 30px;
+  }
 }
 
 .radio-input__input:disabled + .radio-input__text {

@@ -9,14 +9,21 @@
   font-family: inherit;
   color: $color-black;
 
-  resize: none;
   background-color: transparent;
   border: 2px solid $color-charcoal;
   border-radius: 0;
 
+  resize: none;
+
   @media (min-width: $vp-768) {
+    padding: 13px;
+
     font-size: 19px;
-    line-height: 22px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding: 8px 13px;
   }
 
   ::placeholder {
@@ -30,8 +37,8 @@
   }
 
   &:focus-visible {
-    outline: none;
     border-color: $color-downy-2;
+    outline: none;
   }
 
   &:disabled {
