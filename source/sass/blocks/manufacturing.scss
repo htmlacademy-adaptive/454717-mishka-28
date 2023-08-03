@@ -2,7 +2,7 @@
   @include leveler;
 }
 
-.manufactiring__wrapper {
+.manufacturing__wrapper {
   position: relative;
 
   padding-top: 23px;
@@ -19,29 +19,48 @@
   }
 
   @media (min-width: $vp-1150) {
-    grid-template-columns: 60% 1fr;
+    align-items: start;
+    padding-bottom: 0;
+
+    gap: 18px 0;
+    grid-template-columns: 65% 1fr;
   }
 
   &::after {
     @media (min-width: $vp-768) {
       content: "";
       position: absolute;
-      top: 455px;
+      top: 0;
+      right: 0;
       bottom: 0;
       left: 0;
-      right: 0;
-      border: 1px solid $color-whisper;
       z-index: -1;
+
+      margin-top: 68.2%;
+
+      border: 1px solid $color-whisper;
+
+      @media (min-width: $vp-1150) {
+        left: 65%;
+
+        margin-top: 0;
+      }
     }
   }
 }
 
-.manufactiring__wrapper:hover::after {
+.manufacturing__wrapper:hover::after {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-.manufactiring__wrapper:active::after {
+.manufacturing__wrapper:active::after {
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.manufacturing__wrapper * {
+  @media (min-width: $vp-1150) {
+    grid-column-start: 2;
+  }
 }
 
 .manufacturing__title {
@@ -63,6 +82,14 @@
     font-size: 20px;
 
     gap: 35px;
+  }
+
+  @media (min-width: $vp-1150) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 47px 55px 0 80px;
+
+    gap: 28px;
   }
 
   &::before {
@@ -89,18 +116,16 @@
   }
 
   @media (min-width: $vp-1150) {
+    grid-column-start: 1;
     grid-row: 1/4;
   }
 }
 
 .manufacturing__preview {
-  object-fit: cover;
   display: block;
   width: 100%;
 
-  @media (min-width: $vp-768) {
-    height: 455px;
-  }
+  object-fit: cover;
 }
 
 .manufacturing__player-control {
@@ -156,6 +181,11 @@
     font-size: 15px;
     line-height: 30px;
   }
+
+  @media (min-width: $vp-1150) {
+    margin-bottom: 26px;
+    padding: 0 55px 0 80px;
+  }
 }
 
 .manufacturing__button {
@@ -168,7 +198,13 @@
     max-width: initial;
   }
 
-  @media (min-width: $vp-768) {
+  @media (min-width: $vp-1150) {
     width: 230px;
+    margin-bottom: 53px;
+    margin-left: 80px;
   }
+}
+
+.manufacturing__button:not(:last-child) {
+  margin-bottom: 30px;
 }

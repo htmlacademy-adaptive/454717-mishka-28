@@ -109,6 +109,10 @@
   @media (min-width: $vp-768) {
     margin-bottom: 53px;
   }
+
+  @media (min-width: $vp-1150) {
+    margin-bottom: 57px;
+  }
 }
 
 .page__manufacturing {
@@ -116,6 +120,10 @@
 
   @media (min-width: $vp-768) {
     margin-bottom: 66px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin-bottom: 104px;
   }
 }
 
