@@ -143,6 +143,7 @@
 .week-product__img {
   display: block;
   width: 100%;
+  max-height: 700px;
 
   @media (min-width: $vp-1150) {
     position: absolute;

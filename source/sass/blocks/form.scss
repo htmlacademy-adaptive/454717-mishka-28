@@ -45,11 +45,12 @@
 }
 
 .form__group {
+  position: relative;
+
   margin: 0 0 34px 0;
   padding: 0;
 
   border: none;
-  border-top: 1px solid $color-downy-2;
 
   @media (min-width: $vp-768) {
     display: grid;
@@ -62,7 +63,7 @@
     grid-template-columns: 117px 1fr;
   }
 
-  @media (min-width: $vp-768) {
+  @media (min-width: $vp-1150) {
     grid-template-columns: 66px 1fr;
   }
 
@@ -95,7 +96,11 @@
   }
 
   &--user-info {
-    margin-bottom: 50px;
+    margin-bottom: 34px;
+
+    @media (min-width: $vp-768) {
+      margin-bottom: 50px;
+    }
 
     @media (min-width: $vp-1150) {
       margin-right: 114px;
@@ -111,7 +116,7 @@
 
     @media (min-width: $vp-1150) {
       margin-right: 114px;
-      margin-bottom: 47px;
+      margin-bottom: 49px;
     }
   }
 
@@ -160,17 +165,21 @@
 }
 
 .form__legend {
+  display: inline-flex;
   min-width: 60px;
-  margin-bottom: 30px;
+  margin: 0 0 30px 0;
   padding: 0 18px 0 0;
+
+  background-color: $color-white;
 
   @include special-text;
 
   @media (min-width: $vp-768) {
-    float: left;
     margin: 16px 0 0 0;
 
     text-align: left;
+
+    background-color: transparent;
   }
 
   @media (min-width: $vp-1150) {
@@ -178,30 +187,23 @@
   }
 
   &--label {
-    display: inline-flex;
     margin-bottom: 0;
+  }
 
-    background-color: $color-white;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: currentColor;
 
     @media (min-width: $vp-768) {
-      background-color: transparent;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 8px;
-      left: 0;
-      z-index: -1;
-
-      width: 100%;
-      height: 1px;
-
-      background-color: currentColor;
-
-      @media (min-width: $vp-768) {
-        display: none;
-      }
+      display: none;
     }
   }
 

@@ -5,14 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- <link rel="preload" href="fonts/lato/lato-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/oswald/oswald-regular.woff2" as="font" crossorigin="anonymous"> -->
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font" crossorigin="anonymous">
   <title>HTML Academy: Мишка, страница формы.</title>
   <meta name="description" content="Учебный проект HTML Academy: Мишка. HTML и CSS. Адаптивная вёрстка и автоматизация. Страница формы.">
-  <!-- <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-180.png">
-  <link rel="manifest" href="manifest.webmanifest"> -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page">
@@ -66,7 +66,7 @@
         <h2 class="visually-hidden">Оформить заказ</h2>
         <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <fieldset class="form__group form__group--type">
-          <legend class="form__legend">Тип</legend>
+          <h3 class="form__legend">Тип</h3>
           <ul class="form__list">
             <li class="form__item">
               <label class="form__element radio-input">
@@ -83,7 +83,7 @@
           </ul>
         </fieldset>
         <fieldset class="form__group form__group--color form__group--has-background">
-          <legend class="form__legend">Цвет</legend>
+          <h3 class="form__legend">Цвет</h3>
           <ul class="form__list form__list--columns">
             <li class="form__item">
               <label class="form__element checkbox-input">
@@ -124,7 +124,7 @@
           </ul>
         </fieldset>
         <fieldset class="form__group form__group--user-info">
-          <legend class="form__legend">ФИО</legend>
+          <h3 class="form__legend">ФИО</h3>
           <ul class="form__list">
             <li class="form__item">
               <label class="form__field input">
@@ -147,7 +147,7 @@
           </ul>
         </fieldset>
         <fieldset class="form__group form__group--user-contacts form__group--has-background">
-          <legend class="visually-hidden">Контактые данные</legend>
+          <h3 class="visually-hidden">Контактые данные</h3>
           <ul class="form__list">
             <li class="form__field input input--has-icon input--icon-tel">
               <label for="user-tel" class="form__legend form__legend--label input__label">Тел</label>
@@ -166,7 +166,7 @@
           </ul>
         </fieldset>
         <fieldset class="form__group form__group--textarea">
-          <legend class="form__legend">Доп</legend>
+          <h3 class="form__legend">Доп</h3>
           <textarea class="textarea" name="comment" placeholder="Опишите все ваши пожелания к заказу" aria-label="Опишите все ваши пожелания к заказу."></textarea>
         </fieldset>
         <div class="form__button-container">

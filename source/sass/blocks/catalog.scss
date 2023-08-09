@@ -45,6 +45,14 @@
 .catalog__img {
   display: block;
   width: 100%;
+
+  @media (min-width: $vp-768) {
+    aspect-ratio: 1 / 1;
+  }
+
+  @media (min-width: $vp-1150) {
+    aspect-ratio: 316 / 462;
+  }
 }
 
 .catalog__content {
@@ -100,7 +108,7 @@
     font-size: 15px;
   }
 
-  @media (min-width: $vp-768) {
+  @media (min-width: $vp-1150) {
     margin-bottom: 12px;
   }
 }

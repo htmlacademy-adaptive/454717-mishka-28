@@ -125,30 +125,41 @@
   display: block;
   width: 100%;
 
+  aspect-ratio: 260/150;
   object-fit: cover;
+
+  @media (min-width: $vp-768) {
+    aspect-ratio: 668/455;
+  }
+
+  @media (min-width: $vp-1150) {
+    aspect-ratio: 683/455;
+  }
 }
 
 .manufacturing__player-control {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
   width: 100px;
   height: 77px;
+  margin: auto;
 
   background-color: $color-downy;
   border: 6px solid $color-white;
   border-radius: 20px;
-  transform: translate(-50%, -50%);
 
   transition: opacity 0.3s, transform 0.3s;
 
   &:hover {
-    transform: translate(-50%, -50%) scale(1.2);
+    transform: scale(1.2);
   }
 
   &:active {
-    transform: translate(-50%, -50%) scale(0.8);
+    transform: scale(0.8);
     opacity: 0.3;
   }
 

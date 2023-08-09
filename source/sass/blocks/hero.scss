@@ -65,6 +65,13 @@
       background-size: 1250px 34px;
     }
   }
+
+  &--inner::after {
+    @media (min-width: $vp-1150) {
+      background-image: url("../img/background/zigzag-fill-desktop-inner.svg");
+      background-size: 1150px 34px;
+    }
+  }
 }
 
 .hero__title {
@@ -88,6 +95,10 @@
   @media (min-width: $vp-1150) {
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .hero--index & {
+    margin-bottom: 40px;
   }
 }
 
@@ -125,7 +136,6 @@
     background-image: linear-gradient(to right, var(--interior-color) 50%, var(--toys-color) 50%);
 
     grid-template-columns: 1fr 1fr;
-
     @include leveler;
   }
 }

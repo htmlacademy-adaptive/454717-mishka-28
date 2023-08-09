@@ -20,9 +20,19 @@
 .page-footer__logo {
   display: none;
 
+  color: $color-black;
+
   @media (min-width: $vp-768) {
     display: block;
     margin-top: 4px;
+  }
+
+  &:hover {
+    color: $color-puerto-rico-2;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -43,11 +53,15 @@
 
   text-decoration: none;
 
-  gap: 27px;
+  gap: 28px;
 
   @media (min-width: $vp-768) {
     margin-top: 5px;
     padding: 0;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin-right: 7px;
   }
 }
 
@@ -61,8 +75,9 @@
 }
 
 .page-footer__copyright-logo {
-  color: $color-downy;
   flex-shrink: 0;
+
+  color: $color-downy;
 }
 
 .page-footer__copyright:hover .page-footer__copyright-logo {

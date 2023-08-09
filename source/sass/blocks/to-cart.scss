@@ -29,6 +29,7 @@
 }
 
 .to-cart__legend {
+  width: 100%;
   margin-bottom: 21px;
 
   font-size: 15px;
@@ -56,6 +57,12 @@
   border-color: $color-downy;
 }
 
+.to-cart__radio:disabled + .to-cart__radio-text {
+  opacity: 0.4;
+
+  pointer-events: none;
+}
+
 .to-cart__radio-text {
   display: block;
   padding: 18px;
@@ -68,6 +75,7 @@
   text-transform: uppercase;
 
   border: 2px solid rgba($color-charcoal, 0.1);
+  cursor: pointer;
 
   &:hover {
     border-color: rgba($color-charcoal, 0.3);
