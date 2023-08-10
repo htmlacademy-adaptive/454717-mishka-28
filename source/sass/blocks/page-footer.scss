@@ -10,10 +10,10 @@
   @media (min-width: $vp-768) {
     display: grid;
     padding-top: 48px;
-    padding-bottom: 58px;
+    padding-bottom: 48px;
 
     gap: 20px;
-    grid-template-columns: 102px 1fr 180px;
+    grid-template-columns: 122px 1fr 200px;
   }
 }
 
@@ -56,12 +56,9 @@
   gap: 28px;
 
   @media (min-width: $vp-768) {
+    justify-content: flex-end;
     margin-top: 5px;
     padding: 0;
-  }
-
-  @media (min-width: $vp-1150) {
-    margin-right: 7px;
   }
 }
 

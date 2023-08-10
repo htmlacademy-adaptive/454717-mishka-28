@@ -299,6 +299,7 @@
   @media (min-width: $vp-768) {
     display: grid;
     align-items: start;
+    margin-bottom: 2px;
 
     gap: 40px;
     grid-template-columns: 230px 1fr;

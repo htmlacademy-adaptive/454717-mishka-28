@@ -80,6 +80,10 @@
   &:hover {
     border-color: rgba($color-charcoal, 0.3);
   }
+
+  &:active {
+    border-color: rgba($color-charcoal, 0.5);
+  }
 }
 
 .to-cart__button {

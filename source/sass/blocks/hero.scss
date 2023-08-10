@@ -136,7 +136,6 @@
     background-image: linear-gradient(to right, var(--interior-color) 50%, var(--toys-color) 50%);
 
     grid-template-columns: 1fr 1fr;
-
     @include leveler;
   }
 }
@@ -165,6 +164,10 @@
 
   &:hover {
     transform: translateY(-5px);
+  }
+
+  &:focus-visible {
+    z-index: 1;
   }
 
   &--interior {
