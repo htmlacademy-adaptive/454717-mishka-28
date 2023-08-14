@@ -10,7 +10,7 @@ const openButtons = document.querySelectorAll(".open-button");
 
 openButtons.forEach((el) => el.addEventListener("click", () => modal.classList.add("modal--opened")));
 
-modal.addEventListener("click", (evt) => {
+modal && modal.addEventListener("click", (evt) => {
   if (!evt.target.closest(".modal__content")) {
     modal.classList.remove("modal--opened");
   }
