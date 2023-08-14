@@ -1,0 +1,56 @@
+@mixin leveler {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: $vp-768) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
+@mixin special-text {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: $color-downy;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    font-size: 17px;
+    line-height: 17px;
+    text-align: center;
+  }
+}
+
+@mixin subtitle {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+
+  @media (min-width: $vp-768) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $vp-1150) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

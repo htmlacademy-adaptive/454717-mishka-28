@@ -5,15 +5,25 @@
 @import "./global/fonts";
 @import "./global/global";
 @import "./global/utils";
+@import "./global/mixins";
 
 // Блоки компонентов
 @import "./blocks/page";
 @import "./blocks/button";
+@import "./blocks/modal";
 @import "./blocks/social";
 @import "./blocks/input";
 @import "./blocks/textarea";
 @import "./blocks/radio-input";
 @import "./blocks/checkbox-input";
 @import "./blocks/main-header";
+@import "./blocks/hero";
+@import "./blocks/week-product";
+@import "./blocks/advantages";
+@import "./blocks/slider";
 @import "./blocks/contacts";
+@import "./blocks/form";
+@import "./blocks/catalog";
+@import "./blocks/manufacturing";
+@import "./blocks/to-cart";
 @import "./blocks/page-footer";

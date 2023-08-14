@@ -1,0 +1,131 @@
+.advantages__wrapper {
+  padding-top: 32px;
+
+  @include leveler;
+
+  @media (min-width: $vp-768) {
+    padding-top: 57px;
+  }
+
+  @media (min-width: $vp-1150) {
+    padding-top: 64px;
+    padding-right: 250px;
+    padding-left: 225px;
+  }
+}
+
+.advantages__title {
+  margin: 0 0 28px 0;
+
+  @include subtitle;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 43px;
+  }
+}
+
+.advantages__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  gap: 30px;
+  grid-auto-flow: dense;
+
+  @media (min-width: $vp-768) {
+    gap: 57px 70px;
+    grid-template-columns: 40% 1fr;
+  }
+
+  @media (min-width: $vp-1150) {
+    grid-template-columns: 1fr 48%;
+  }
+}
+
+.advantages__item {
+  position: relative;
+
+  padding-top: 53px;
+
+  font-weight: 700;
+  line-height: 20px;
+
+  @media (min-width: $vp-768) {
+    line-height: 22px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -4px;
+
+    width: 55px;
+    height: 38px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:nth-child(-n+3) {
+    @media (min-width: $vp-768) {
+      grid-column-start: 1;
+    }
+  }
+
+  &--eco {
+    &::before {
+      background-image: url("../img/stack.svg#eco");
+      background-size: 33px 38px;
+    }
+  }
+
+  &--price {
+    &::before {
+      top: -5px;
+
+      background-image: url("../img/stack.svg#price");
+      background-size: 47px 27px;
+    }
+  }
+
+  &--like {
+    &::before {
+      background-image: url("../img/stack.svg#like");
+      background-size: 34px 27px;
+    }
+  }
+
+  &--handmade {
+    &::before {
+      background-image: url("../img/stack.svg#handmade");
+      background-size: 35px 34px;
+
+      @media (min-width: $vp-768) {
+        left: -9px;
+      }
+    }
+  }
+
+  &--patriot {
+    &::before {
+      top: -4px;
+      left: -6px;
+
+      background-image: url("../img/stack.svg#patriot");
+      background-size: 55px 23px;
+    }
+  }
+
+  &--gift {
+    &::before {
+      top: -2px;
+      left: -8px;
+
+      background-image: url("../img/stack.svg#gift");
+      background-size: 33px 32px;
+    }
+  }
+}

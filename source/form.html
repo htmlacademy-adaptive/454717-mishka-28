@@ -5,28 +5,28 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.min.css">
-  <!-- <link rel="preload" href="fonts/lato/lato-regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/oswald/oswald-regular.woff2" as="font" crossorigin="anonymous"> -->
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensans-bold.woff2" as="font" crossorigin="anonymous">
   <title>HTML Academy: Мишка, страница формы.</title>
   <meta name="description" content="Учебный проект HTML Academy: Мишка. HTML и CSS. Адаптивная вёрстка и автоматизация. Страница формы.">
-  <!-- <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="img/favicons/apple-180.png">
-  <link rel="manifest" href="manifest.webmanifest"> -->
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page">
-  <header class="page__main-header main-header no-js">
-    <div class="main-header__container">
-      <button class="main-header__toggle" type="button">
-        <span class="visually-hidden">Открыть или закрыть меню навигации по сайту.</span>
-      </button>
+  <header class="page__main-header main-header main-header--inner no-js">
+    <button class="main-header__toggle" type="button">
+      <span class="visually-hidden">Открыть или закрыть меню навигации по сайту.</span>
+    </button>
+    <div class="main-header__wrapper">
       <nav class="main-header__nav">
         <a class="main-header__logo" href="index.html" aria-label="Перейти на главную страницу сайта Мишка.">
           <picture>
-            <!-- <source media="(min-width: 1150px)" srcset="img/content/cat-energy-logo-desktop.svg" width="202" height="59">
-            <source media="(min-width: 768px)" srcset="img/content/cat-energy-logo-tablet.svg" width="174" height="52">-->
-            <img class="main-header__logo-img" src="img/content/logo-mishka-phone.svg" alt="Логотип интернет-магазина Мишка." width="86" height="35">
+            <source media="(min-width: 1150px)" srcset="img/content/mishka-logo-desktop.svg" width="149" height="72">
+            <source media="(min-width: 768px)" srcset="img/content/mishka-logo-tablet.svg" width="113" height="46">
+            <img class="main-header__logo-img" src="img/content/mishka-logo-mobile.svg" alt="Логотип интернет-магазина Мишка." width="86" height="35">
           </picture>
         </a>
         <ul class="main-header__nav-list">
@@ -46,20 +46,27 @@
           </li>
         </ul>
       </nav>
-      <div class="main-header__user-nav">
-        <a class="main-header__user-nav-link main-header__user-nav-link--search" href="javascript:undefined;">Поиск по сайту</a>
-        <a class="main-header__user-nav-link main-header__user-nav-link--cart" href="javascript:undefined;">Корзина: пока пуста</a>
+      <div class="main-header__user-nav-wrapper">
+        <div class="main-header__user-nav">
+          <a class="main-header__user-nav-link main-header__user-nav-link--search" href="javascript:undefined;">
+            <span class="main-header__user-nav-link-text">Поиск по сайту</span>
+          </a>
+          <a class="main-header__user-nav-link main-header__user-nav-link--cart" href="javascript:undefined;">Корзина: пока пуста</a>
+        </div>
+        <span class="main-header__text">Бесплатная доставка по России</span>
       </div>
-      <span class="main-header__text">Бесплатная доставка по России</span>
     </div>
   </header>
   <main class="page__page-main">
+    <section class="page__hero page__hero--form hero hero--inner">
+      <h1 class="hero__title">Вязание на заказ</h1>
+    </section>
     <form class="page__form form" action="https://echo.htmlacademy.ru/" method="post">
       <div class="form__container">
-        <h1 class="form__title">Вязание на заказ</h1>
+        <h2 class="visually-hidden">Оформить заказ</h2>
         <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <fieldset class="form__group">
-          <legend class="form__legend">Тип</legend>
+        <fieldset class="form__group form__group--type">
+          <h3 class="form__legend">Тип</h3>
           <ul class="form__list">
             <li class="form__item">
               <label class="form__element radio-input">
@@ -75,8 +82,8 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__group">
-          <legend class="form__legend">Цвет</legend>
+        <fieldset class="form__group form__group--color form__group--has-background">
+          <h3 class="form__legend">Цвет</h3>
           <ul class="form__list form__list--columns">
             <li class="form__item">
               <label class="form__element checkbox-input">
@@ -116,8 +123,8 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__group">
-          <legend class="form__legend">ФИО</legend>
+        <fieldset class="form__group form__group--user-info">
+          <h3 class="form__legend">ФИО</h3>
           <ul class="form__list">
             <li class="form__item">
               <label class="form__field input">
@@ -139,34 +146,32 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__group">
-          <legend class="visually-hidden">Контактые данные</legend>
+        <fieldset class="form__group form__group--user-contacts form__group--has-background">
+          <h3 class="visually-hidden">Контактые данные</h3>
           <ul class="form__list">
-            <li class="form__item">
-              <div class="form__field input input--has-icon input--icon-tel">
-                <label for="user-tel" class="form__legend">Тел</label>
-                <p class="input__input-wrapper">
-                  <input class="input__input" type="tel" name="user-tel" id="user-tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-                </p>
-              </div>
+            <li class="form__field input input--has-icon input--icon-tel">
+              <label for="user-tel" class="form__legend form__legend--label input__label">Тел</label>
+              <p class="input__input-wrapper">
+                <input class="input__input" type="tel" name="user-tel" id="user-tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+                <span class="input__icon"></span>
+              </p>
             </li>
-            <li class="form__item">
-              <div class="form__field input input--has-icon input--icon-email">
-                <label for="user-email" class="form__legend">E-mail</label>
-                <p class="input__input-wrapper">
-                  <input class="input__input" type="email" name="user-email" id="user-email" placeholder="Ваш Email*" required>
-                </p>
-              </div>
+            <li class="form__field input input--has-icon input--icon-email">
+              <label for="user-email" class="form__legend form__legend--label input__label">E-mail</label>
+              <p class="input__input-wrapper">
+                <input class="input__input" type="email" name="user-email" id="user-email" placeholder="Ваш Email*" required>
+                <span class="input__icon"></span>
+              </p>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__group form__group--textarea">
-          <legend class="form__legend">Доп</legend>
+          <h3 class="form__legend">Доп</h3>
           <textarea class="textarea" name="comment" placeholder="Опишите все ваши пожелания к заказу" aria-label="Опишите все ваши пожелания к заказу."></textarea>
         </fieldset>
         <div class="form__button-container">
           <span class="form__info">*Поля обязательны для заполнения</span>
-          <button class="form__button button" type="submit">Отправить заказ</button>
+          <button class="form__button button button--neutral" type="submit">Отправить заказ</button>
         </div>
       </div>
     </form>
@@ -175,7 +180,7 @@
     <div class="page-footer__container">
       <a class="page-footer__logo" href="index.html" aria-label="Перейти на главную страницу сайта Мишка.">
         <svg class="page-footer__logo-img" role="img" aria-label="Логотип магазина Мишка." width="102" height="34">
-          <use xlink:href="img/stack.svg#logo-mishka-footer"></use>
+          <use xlink:href="img/stack.svg#mishka-logo-footer"></use>
         </svg>
       </a>
       <ul class="page-footer__social social">

@@ -4,7 +4,7 @@
   font-family: "Open Sans";
 
   font-display: swap;
-  src: url("../fonts/lato/opensans.woff2") format("woff2"), url("../fonts/lato/opensans.woff") format("woff");
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/lato/opensans.woff") format("woff");
 }
 
 @font-face {
@@ -13,5 +13,5 @@
   font-family: "Open Sans";
 
   font-display: swap;
-  src: url("../fonts/oswald/opensans-bold.woff2") format("woff2"), url("../fonts/oswald/opensans-bold.woff") format("woff");
+  src: url("../fonts/opensans-bold.woff2") format("woff2"), url("../fonts/oswald/opensans-bold.woff") format("woff");
 }
