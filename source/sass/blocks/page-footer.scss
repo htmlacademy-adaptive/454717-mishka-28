@@ -1,0 +1,86 @@
+.page-footer {
+  padding-bottom: 3px;
+
+  background-color: $color-white-smoke;
+}
+
+.page-footer__container {
+  @include leveler;
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    gap: 20px;
+    grid-template-columns: 122px 1fr 200px;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+
+  color: $color-black;
+
+  @media (min-width: $vp-768) {
+    display: block;
+    margin-top: 4px;
+  }
+
+  &:hover {
+    color: $color-puerto-rico-2;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__social {
+  margin: 0 auto;
+
+  border-bottom: 1px solid $color-whisper-e5;
+
+  @media (min-width: $vp-768) {
+    border: none;
+  }
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  padding: 22px 0 22px 0;
+
+  text-decoration: none;
+
+  gap: 28px;
+
+  @media (min-width: $vp-768) {
+    justify-content: flex-end;
+    margin-top: 5px;
+    padding: 0;
+  }
+}
+
+.page-footer__copyright-text {
+  margin-top: 6px;
+
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
+  color: $color-black;
+}
+
+.page-footer__copyright-logo {
+  flex-shrink: 0;
+
+  color: $color-downy;
+}
+
+.page-footer__copyright:hover .page-footer__copyright-logo {
+  color: $color-puerto-rico-2;
+}
+
+.page-footer__copyright:active .page-footer__copyright-logo {
+  opacity: 0.3;
+}

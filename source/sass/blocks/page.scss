@@ -1,0 +1,141 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+
+  font-size: 17px;
+  line-height: 24px;
+  font-family: $ff-open-sans;
+
+  @media (min-width: $vp-768) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.page__page-main {
+  flex-grow: 1;
+}
+
+.page__has-line {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    height: 6px;
+
+    background-image: url("../img/stack.svg#zigzag-line");
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    background-size: 320px 6px;
+
+    @media (min-width: $vp-768) {
+      height: 17px;
+
+      background-size: 772px 17px;
+    }
+
+    @media (min-width: $vp-1150) {
+      left: 50%;
+
+      width: 1050px;
+      height: 32px;
+
+      background-size: 1050px 32px;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.page__hero {
+  @media (min-width: $vp-1150) {
+    margin-bottom: 72px;
+  }
+
+  &--catalog {
+    margin-bottom: 30px;
+
+    @media (min-width: $vp-768) {
+      margin-bottom: 80px;
+    }
+
+    @media (min-width: $vp-1150) {
+      margin-bottom: 130px;
+    }
+  }
+
+  &--form {
+    margin-bottom: 17px;
+
+    @media (min-width: $vp-768) {
+      margin-bottom: 67px;
+    }
+
+    @media (min-width: $vp-1150) {
+      margin-bottom: 115px;
+    }
+  }
+}
+
+.page__advantages {
+  margin-bottom: 58px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 83px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin-bottom: 90px;
+  }
+}
+
+.page__contacts {
+  margin-bottom: 39px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 57px;
+  }
+}
+
+.page__catalog {
+  margin-bottom: 30px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 53px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin-bottom: 57px;
+  }
+}
+
+.page__manufacturing {
+  margin-bottom: 58px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 66px;
+  }
+
+  @media (min-width: $vp-1150) {
+    margin-bottom: 104px;
+  }
+}
+
+.page__form {
+  margin-bottom: 55px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 48px;
+  }
+}
+
+.page__page-footer {
+  margin-top: auto;
+}
