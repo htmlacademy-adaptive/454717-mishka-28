@@ -1,5 +1,5 @@
 .to-cart {
-  padding: 28px 30px 46px 30px;
+  padding: 29px 30px 46px 30px;
 
   @media (min-width: $vp-768) {
     padding: 37px 108px 46px 108px;
@@ -16,13 +16,15 @@
   text-transform: uppercase;
 
   @media (min-width: $vp-768) {
+    margin-bottom: 12px;
+
     font-size: 30px;
     line-height: 57px;
   }
 }
 
 .to-cart__group {
-  margin: 0 0 31px 0;
+  margin: 0 0 32px 0;
   padding: 0;
 
   border: none;
@@ -38,6 +40,8 @@
   color: $color-charcoal;
 
   @media (min-width: $vp-768) {
+    margin-bottom: 19px;
+
     font-size: 17px;
   }
 }
@@ -65,7 +69,7 @@
 
 .to-cart__radio-text {
   display: block;
-  padding: 18px;
+  padding: 16px;
 
   font-weight: 700;
   font-size: 17px;
@@ -88,4 +92,5 @@
 
 .to-cart__button {
   width: 100%;
+  padding: 16px;
 }
